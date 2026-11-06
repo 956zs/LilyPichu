@@ -1,50 +1,126 @@
-@use 'selectors';
-// @forward "stuff/chat";
-// @forward "stuff/server-list";
-// @forward "stuff/channel-list";
-// @forward "stuff/channel-bar";
-// @forward "stuff/member-list";
-// @forward "stuff/settings";
-// @forward "stuff/friends";
-// @forward "stuff/other";
+@use 'selectors' as s;
+@use 'variables';
 
+// Kept from the original theme so old customizations still work:
+// --background-tertiary-alt (app background), --jumping-gif, --border-radius.
+$radius: var(--border-radius, 20px);
+$popout-right: var(--popout-right, 60px);
+$popout-width: var(--popout-width, 320px);
+// Room the main window leaves for the right popout.
+$popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 
-// Right popout
+#app-mount {
+	--font-primary: var(--lily-font, "Nunito"), "gg sans", "Noto Sans", "Noto Sans CJK TC", sans-serif;
+	--font-display: var(--lily-font, "Nunito"), "gg sans", "Noto Sans", "Noto Sans CJK TC", sans-serif;
+}
+
+// Pink background behind everything
+#{s.$bg} {
+	background: var(--background-tertiary-alt, #ffc7d4);
+}
+
+// The title bar sits on the pink background, so it needs dark text
+#{s.$titleBar} {
+	--text-default: var(--title-bar-text, #8c4a5a);
+	--text-strong: var(--title-bar-text, #8c4a5a);
+	--interactive-icon-default: var(--title-bar-text, #8c4a5a);
+	--interactive-icon-hover: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
+	--icon-default: var(--title-bar-text, #8c4a5a);
+	color: var(--title-bar-text, #8c4a5a);
+}
+
+#{s.$guilds} {
+	background: var(--lily-tertiary);
+}
+
+#{s.$sidebarList} {
+	border: none;
+	background: var(--lily-secondary);
+}
+
+#{s.$chatContent} {
+	background: var(--lily-primary);
+}
+
+// Right popout: member list, DM profile and friends activity float in a card
+// on the right; "Stay comfy" and the jumping GIF fill it when there is nothing.
 @media (min-width: 1350px) {
-	#{selectors.$userPanelOuter}, // user profile in dms
-	#{selectors.$memberListContainer}, // member list
-	#{selectors.$nowPlayingColumn}, // friends activity
-	#{selectors.$layers} > #{selectors.$layer} > #{selectors.$container}::after,
-	#{selectors.$layers} > #{selectors.$layer} > #{selectors.$container}::before { // empty thing
+	// Main window leaves space for the popout. z-index keeps the corner
+	// decorations behind it and the popouts above the empty state.
+	#{s.$content} {
+		position: relative;
+		z-index: 1;
+		margin-right: $popout-space;
+		margin-bottom: 24px;
+		border-radius: 0 $radius $radius 0;
+		overflow: hidden;
+	}
+
+	// Discord keeps space for the user area under the server list
+	#{s.$guilds} {
+		margin-bottom: 0;
+	}
+
+	#{s.$sidebarList} {
+		border-radius: 0;
+	}
+
+	#{s.$memberList},
+	#{s.$nowPlaying},
+	#{s.$profileSidebar},
+	#{s.$base}::before,
+	#{s.$base}::after {
 		position: fixed;
 		top: 220px;
-		bottom: 85px;
-		right: 60px;
-		width: 320px;
-		min-width: 320px;
-		max-width: 320px;
-		height: unset;
+		bottom: 96px;
+		right: $popout-right;
+		width: $popout-width;
+		min-width: $popout-width;
+		max-width: $popout-width;
+		height: auto;
 	}
 
-	#{selectors.$userPanelOuter},
-	#{selectors.$userPanelInner}, 
-	#{selectors.$layers} > #{selectors.$layer} > #{selectors.$container}::after {		
-		border-radius: var(--border-radius);
+	// Empty state, below the real popouts
+	#{s.$base}::before {
+		content: var(--empty-popout-text, "Stay comfy");
+		z-index: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 30px;
+		font-weight: 700;
+		color: var(--lily-text);
+		background-color: var(--lily-primary);
+		border-radius: $radius;
+		pointer-events: none;
 	}
 
-	#{selectors.$nowPlayingColumn},
-	#{selectors.$memberListContainer} {
+	#{s.$base}::after {
+		content: "";
+		z-index: 0;
+		background: var(--jumping-gif) bottom / 40% no-repeat;
+		pointer-events: none;
+	}
+
+	#{s.$memberList},
+	#{s.$nowPlaying},
+	#{s.$profileSidebar} {
+		z-index: 3;
+	}
+
+	#{s.$memberList},
+	#{s.$nowPlaying} {
 		top: 280px;
-		bottom: 120px;
-	}
+		bottom: 131px;
+		overflow: visible;
+		background-color: var(--lily-primary);
 
-	#{selectors.$nowPlayingColumn},
-	#{selectors.$membersWrap} {
 		// Header
 		&::before {
-			content: "Member list";
+			content: var(--member-list-title, "Member list");
 			position: absolute;
 			top: -60px;
+			left: 0;
 			z-index: 1;
 			width: 100%;
 			height: 60px;
@@ -52,120 +128,113 @@
 			align-items: center;
 			justify-content: center;
 			font-size: 20px;
-			font-weight: bolder;
-			color: var(--header-primary);
-			background-color: var(--background-secondary);
-			border-radius: var(--border-radius) var(--border-radius) 0 0;
+			font-weight: 800;
+			color: var(--lily-text-strong);
+			background-color: var(--lily-secondary);
+			border-radius: $radius $radius 0 0;
 		}
 
-		// Footer
+		// Footer with the dashed line
 		&::after {
 			content: "";
 			position: absolute;
 			bottom: -35px;
+			left: 0;
 			z-index: 1;
 			width: 100%;
 			height: 35px;
-			background-color: var(--background-secondary);
-			border-radius: 0 0 var(--border-radius) var(--border-radius);
-			background-image: linear-gradient( to right, var(--header-primary) 33%, rgba(255, 255, 255, 0) 0%);
+			background-color: var(--lily-secondary);
+			border-radius: 0 0 $radius $radius;
+			background-image: linear-gradient(to right, var(--lily-text) 33%, transparent 0%);
 			background-position: top;
 			background-size: 21px 2px;
 			background-repeat: repeat-x;
 		}
 	}
 
-	#{selectors.$nowPlayingColumn} {
-		#{selectors.$scroller} {
-			border-left: none;
-			margin-left: 0;
-		}
-		// Header
+	#{s.$nowPlaying} {
 		&::before {
-			content: "Member list";
+			content: var(--activity-title, "Active now");
+		}
+
+		// Replaced by the header above
+		h2:first-child {
+			display: none;
 		}
 	}
 
-	#{selectors.$members} {
-		border-radius: var(--border-radius) 0 0;
-	}
-
-	#{selectors.$tabBody} { // wrapper around friend list in starting screen
-		transform: none;
-	}
-
-	// settings
-	#{selectors.$layers} > #{selectors.$layer}:nth-child(2) {
-		margin-right: 450px;
-	}
-
-	#{selectors.$layers} > #{selectors.$layer} > #{selectors.$container} {
-		margin-right: 450px;
-		// Basic right popout when there's nothing
-		&::after {
-			content: "Stay comfy";
-			z-index: -2;
-			background-color: var(--background-primary);
-			text-align: center;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 30px;
-			color: var(--text-normal);
-			overflow: hidden;
-		}
-
-		&::before {
-			content: "";
-			right: 70px;
-			z-index: -1;
-			width: 300px;
-			border-radius: var(--border-radius);
-			background: var(--jumping-gif) bottom/40% no-repeat;
-		}
-	}
-
-	// Adding space for right popout
-	#{selectors.$guilds} + :nth-child(2) {
-		margin-right: 450px;
-		border-radius: 0 var(--border-radius) var(--border-radius) 0;
-	}
-
-
-	// User area
-	#{selectors.$panels} > :last-child {
-		position: fixed;
-		display: flex;
-		width: 305px;
-		height: 50px;
-		bottom: 28px;
-		right: 60px;
-		justify-content: space-between;
-		background-color: var(--background-primary);
-		border-radius: var(--border-radius);
-
-		#{selectors.$avatarWrapper} {
-			border-radius: var(--border-radius);
-		}
-	}
-
-	// TODO: NOT UPDATED - what was this ???
-	.container_c48ade {
-		overflow: visible;
-	}
-
-	#{selectors.$membersWrap} > #{selectors.$members} {
+	#{s.$membersWrap},
+	#{s.$members} {
 		width: 100%;
-		background-color: var(--background-primary);
+		min-width: 0;
+		height: 100%;
+		background-color: transparent;
+	}
 
-		& > #{selectors.$content} {
-			min-height: 1000px;
-			background-color: transparent;
+	#{s.$members} [role="listitem"] {
+		border-radius: $radius;
+	}
+
+	#{s.$profileSidebar} {
+		padding: 0;
+		overflow: hidden;
+		border-radius: $radius;
+		background: transparent;
+
+		.user-profile-sidebar {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			overflow: hidden;
+			border-radius: $radius;
+
+			> #{s.c(inner)} {
+				border-radius: $radius;
+			}
 		}
-		[role='list'] > div#{selectors.$member} {
-			max-width: 300px;
-			border-radius: var(--border-radius);
-			background-color: var(--background-primary);
+	}
+
+	// User area moves under the popout
+	#{s.$panels} {
+		position: fixed;
+		left: auto;
+		right: $popout-right;
+		bottom: 24px;
+		width: $popout-width;
+		border: none;
+		border-radius: $radius;
+		background-color: var(--lily-primary);
+	}
+}
+
+// Profile popouts and the DM profile: the banner stretches down and fades
+// into the card, the avatar becomes a rounded square
+.user-profile-popout,
+.user-profile-sidebar {
+	#{s.c(header)} > #{s.c(banner)} {
+		// Discord sets the height inline
+		height: 300px !important;
+		margin-bottom: -195px;
+		-webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+		mask-image: linear-gradient(to bottom, #000, transparent);
+		pointer-events: none;
+
+		// The avatar cutout does not fit a square avatar
+		> * {
+			height: 100%;
+			-webkit-mask: none;
+			mask: none;
+		}
+	}
+
+	#{s.c(header)} > #{s.c(avatar)} {
+		svg > foreignObject {
+			mask: none;
+		}
+
+		img,
+		#{s.c(avatarStack)} {
+			border-radius: var(--border-radius, 20px);
 		}
 	}
 }
