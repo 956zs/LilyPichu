@@ -1,4 +1,4 @@
-@use '../selectors';
+@use 'selectors';
 :root {
 	// Right friend list
 	#{selectors.$privateChannels} {

@@ -1,4 +1,4 @@
-@use '../selectors';
+@use 'selectors';
 :root #{selectors.$content}[aria-label*="Channels"] #{selectors.$sidebar} {
 	border-radius: 0;
 	// Channels

@@ -1,4 +1,4 @@
-@use '../selectors';
+@use 'selectors';
 :root #{selectors.$chat} {
 	// Forums
 	#{selectors.$content} > #{selectors.$container}:has(#{selectors.$grid}, #{selectors.$list}) {

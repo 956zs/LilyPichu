@@ -1,4 +1,4 @@
-@use '../selectors';
+@use 'selectors';
 :root {
 	#{selectors.$guilds} > ul >  #{selectors.$scroller} {
 		padding: 8px 0 130px 0;
