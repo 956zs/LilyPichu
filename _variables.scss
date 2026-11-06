@@ -1,128 +1,139 @@
-@use "lilypichu.scss";
+// Palette. Everything is mixed from one base color so a single variable in
+// lilypichu.theme.css recolors the whole client:
+//   --base-color        both modes
+//   --base-color-dark   dark mode only (wins over --base-color)
+//   --base-color-light  light mode only (wins over --base-color)
+//   --accent-color      buttons, toggles, brand color
+// The default reproduces the original LilyPichu colors (#5e3640 / #49292f / ...).
 
-:root {
-  // --- User variables ---
+$dark: 'var(--base-color-dark, var(--base-color, #6e3f4a))';
+$light: 'var(--base-color-light, var(--base-color, #fd8787))';
 
-  // Jumping GIF
-  --jumping-gif: url("https://i.imgur.com/dCd49s0.gif");
+@mixin dark-palette {
+	--lily-primary: color-mix(in srgb, #{$dark} 86%, black);
+	--lily-secondary: color-mix(in srgb, #{$dark} 65%, black);
+	--lily-secondary-alt: color-mix(in srgb, #{$dark} 53%, black);
+	--lily-tertiary: color-mix(in srgb, #{$dark} 31%, black);
+	--lily-floating: color-mix(in srgb, #{$dark} 30%, black);
+	--lily-accent: var(--accent-color, #c5536c);
+	--lily-accent-text: color-mix(in srgb, var(--lily-accent), white 45%);
 
-  // Background (if you want an image replace it by :
-
-  // --background-tertiary-alt: url("image-link");
-  --background-tertiary-alt: #ffc7d4;
-
-  // Border-radius for the whole theme
-  --border-radius: 20px;
-
-  .colorDefault_c1e9c4.focused_c1e9c4,
-  .colorDefault_c1e9c4:active:not(.hideInteraction_c1e9c4) {
-    background-color: var(--background-modifier-hover) !important;
-  }
-
-  // Buttons
-  .lookFilled__201d5 {
-    background-color: #c5536c !important;
-  }
-  .lookFilled__201d5:active,
-  .lookFilled__201d5:hover {
-    background-color: #b64a61 !important;
-  }
-  .lookOutlined-3yKVGo:not(.colorWhite-1H92hK) {
-    color: #c5536c;
-    border-color: #c5536c;
-  }
-
-  // Hover background
-  .colorDefault_c1e9c4.focused_c1e9c4,
-  .colorDefault_c1e9c4:active:not(.hideInteraction_c1e9c4) {
-    color: var(--interactive-normal);
-  }
+	--lily-text: color-mix(in srgb, #{$dark}, white 82%);
+	--lily-text-strong: color-mix(in srgb, #{$dark}, white 92%);
+	--lily-text-muted: color-mix(in srgb, #{$dark}, #f0f0f0 68%);
+	--lily-text-subtle: color-mix(in srgb, #{$dark}, #d8d8d8 52%);
+	--lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
+	--lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
+	--lily-interactive-active: color-mix(in srgb, #{$dark}, white 90%);
+	--lily-hover: #ffffff0d;
+	--lily-selected: #ffffff17;
+	--lily-active: #ffffff21;
 }
 
-.theme-dark {
-  // Text
-  --text-normal: #f8e1e5;
-  --header-primary: #f8e1e5;
-  --interactive-normal: #fab1bd;
-  --channels-default: #f8e1e5;
+@mixin light-palette {
+	--lily-primary: color-mix(in srgb, #{$light} 6%, white);
+	--lily-secondary: color-mix(in srgb, #{$light} 15%, white);
+	--lily-secondary-alt: color-mix(in srgb, #{$light} 30%, white);
+	--lily-tertiary: color-mix(in srgb, #{$light} 45%, white);
+	--lily-floating: color-mix(in srgb, #{$light} 12%, white);
+	--lily-accent: var(--accent-color, color-mix(in srgb, #{$light}, black 25%));
+	--lily-accent-text: color-mix(in srgb, var(--lily-accent), black 15%);
 
-  --text-muted: #e2c1c7;
-  --interactive-muted: #ad8c91;
-
-  --header-secondary: #e2c1c7;
-  --interactive-hover: #e2c1c7;
-  --interactive-active: #e2c1c7;
-
-  // Background color
-  --background-primary: #5e3640 !important;
-  --background-secondary: #49292f;
-  --background-secondary-alt: #3b1d24;
-  --background-tertiary: #220f14;
-  --background-floating: #221115;
-  --background-accent: #c5536c;
-  --activity-card-background: var(--background-secondary-alt);
-  --channeltextarea-background: var(--background-secondary);
-  --modal-background: var(--background-primary);
-  --background-modifier-hover: #5e36403b;
-  --background-modifier-active: #5e364058;
-  --background-modifier-selected: #5e364068;
-  --toast-background: #5e3640 !important;
-  --toast-header: #3b1d24 !important;
-  --toast-contents: #49292f !important;
-  --toast-border: #49292f !important;
-  --input-background: var(--background-secondary);
-
-  // Scrollbar
-  --scrollbar-auto-thumb: var(--background-tertiary);
-  --scrollbar-auto-track: var(--background-secondary-alt);
-  --scrollbar-thin-thumb: var(--background-tertiary);
-  --scrollbar-thin-track: transparent;
-
-  // Other
-  --channel-text-area-placeholder: var(--text-muted);
-  --deprecated-quickswitcher-input-background: var(--background-primary);
-  --brand-experiment: var(--background-accent);
-  --channel-icon: var(--interactive-normal);
+	--lily-text: color-mix(in srgb, #{$light}, #3a2a2e 75%);
+	--lily-text-strong: color-mix(in srgb, #{$light}, #1e1416 80%);
+	--lily-text-muted: color-mix(in srgb, #{$light}, #5a4a4e 70%);
+	--lily-text-subtle: color-mix(in srgb, #{$light}, #7a6a6e 55%);
+	--lily-interactive: color-mix(in srgb, #{$light}, #5a3a42 65%);
+	--lily-interactive-hover: color-mix(in srgb, #{$light}, #3a2a2e 70%);
+	--lily-interactive-active: color-mix(in srgb, #{$light}, #1e1416 80%);
+	--lily-hover: #0000000a;
+	--lily-selected: #00000012;
+	--lily-active: #0000001c;
 }
 
-.theme-light {
-  // Text
-  --text-normal: #a86373;
-  --header-primary: #a86373;
-  --interactive-normal: #a86373;
-  --channels-default: #a86373;
+// Discord's semantic tokens (2026 naming). Old names such as
+// --background-primary are no longer read by the client.
+@mixin tokens {
+	--app-frame-background: var(--lily-tertiary);
+	--background-base-lowest: var(--lily-tertiary);
+	--background-base-lower: var(--lily-secondary-alt);
+	--background-base-low: var(--lily-secondary);
+	--background-surface-high: var(--lily-secondary);
+	--background-surface-higher: color-mix(in srgb, var(--lily-secondary), var(--lily-primary));
+	--background-surface-highest: var(--lily-primary);
+	--background-secondary-alt: var(--lily-secondary-alt);
+	--background-accent: var(--lily-accent);
+	--background-brand: var(--lily-accent);
+	--bg-surface-raised: var(--lily-secondary);
+	--chat-background: var(--lily-primary);
+	--chat-background-default: var(--lily-primary);
+	--home-background: var(--lily-primary);
+	--panel-bg: var(--lily-secondary);
+	--modal-background: var(--lily-secondary);
+	--modal-footer-background: var(--lily-secondary-alt);
+	--card-background-default: var(--lily-secondary-alt);
+	--embed-background: var(--lily-secondary);
+	--channeltextarea-background: var(--lily-secondary);
+	--user-profile-overlay-background: var(--lily-secondary-alt);
 
-  --text-muted: #a86373;
-  --interactive-muted: #cf92a0;
+	--text-default: var(--lily-text);
+	--text-strong: var(--lily-text-strong);
+	--text-muted: var(--lily-text-muted);
+	--text-subtle: var(--lily-text-subtle);
+	--chat-text-muted: var(--lily-text-muted);
+	--text-brand: var(--lily-accent-text);
+	--channels-default: var(--lily-text-muted);
+	--channel-icon: var(--lily-interactive);
+	--channel-text-area-placeholder: var(--lily-text-subtle);
+	--input-placeholder-text-default: var(--lily-text-subtle);
+	--input-text-default: var(--lily-text);
 
-  --header-secondary: #cf92a0;
-  --interactive-hover: #be7d8c;
-  --interactive-active: #b36f7f;
+	--interactive-text-default: var(--lily-interactive);
+	--interactive-text-hover: var(--lily-interactive-hover);
+	--interactive-text-active: var(--lily-interactive-active);
+	--interactive-icon-default: var(--lily-interactive);
+	--interactive-icon-hover: var(--lily-interactive-hover);
+	--interactive-icon-active: var(--lily-interactive-active);
+	--interactive-muted: var(--lily-text-subtle);
+	--interactive-background-hover: var(--lily-hover);
+	--interactive-background-selected: var(--lily-selected);
+	--interactive-background-active: var(--lily-active);
+	--icon-default: var(--lily-interactive);
+	--icon-strong: var(--lily-interactive-active);
+	--icon-muted: var(--lily-text-subtle);
+	--icon-subtle: var(--lily-text-muted);
+	--icon-brand: var(--lily-accent-text);
 
-  // Background color
-  --background-primary: #ffffff;
-  --background-secondary: #ffeeee;
-  --background-secondary-alt: #fdc7c7;
-  --background-tertiary: #ffbbbb;
-  --background-floating: #ffbbbb;
-  --background-accent: #c5536c;
-  --channeltextarea-background: var(--background-secondary);
-  --background-modifier-hover: rgba(56, 31, 31, 0.062);
-  --background-modifier-active: rgba(19, 12, 12, 0.123);
-  --background-modifier-selected: rgba(31, 21, 21, 0.11);
+	--control-primary-background-default: var(--lily-accent);
+	--control-primary-background-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+	--control-primary-background-active: color-mix(in srgb, var(--lily-accent), black 18%);
+	--control-brand-foreground: var(--lily-accent-text);
+	--control-brand-foreground-new: var(--lily-accent-text);
+	--brand-500: var(--lily-accent);
+	--brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+	--switch-background-selected-default: var(--lily-accent);
+	--switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
 
-  // Scrollbar
-  --scrollbar-auto-thumb: var(--background-tertiary);
-  --scrollbar-auto-track: var(--background-secondary-alt);
-  --scrollbar-thin-thumb: var(--background-tertiary);
-  --scrollbar-thin-track: transparent;
-
-  // Other
-  --deprecated-quickswitcher-input-background: var(--background-primary);
+	--scrollbar-auto-thumb: var(--lily-tertiary);
+	--scrollbar-auto-track: var(--lily-secondary-alt);
+	--scrollbar-thin-thumb: var(--lily-tertiary);
+	--scrollbar-thin-track: transparent;
 }
 
-#app-mount {
-  // Fonts
-  --font-primary: "Nunito";
-  --font-display: "Nunito";
+// `html` raises specificity above Discord's own `.theme-dark` rules, which
+// are also set on inner elements (title bar, popouts, profile cards).
+html.theme-dark,
+html .theme-dark,
+html.theme-darker,
+html .theme-darker,
+html.theme-midnight,
+html .theme-midnight {
+	@include dark-palette;
+	@include tokens;
+}
+
+html.theme-light,
+html .theme-light {
+	@include light-palette;
+	@include tokens;
 }
