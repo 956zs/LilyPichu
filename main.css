@@ -406,6 +406,17 @@
   z-index: 1;
 }
 
+[data-list-item-id=guildsnav___home] :is([class^=childWrapper_], [class*=" childWrapper_"]) {
+  position: relative;
+}
+[data-list-item-id=guildsnav___home] :is([class^=childWrapper_], [class*=" childWrapper_"])::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--home-icon, none) center/cover no-repeat;
+  pointer-events: none;
+}
+
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=notice_], [class*=" notice_"]) {
   margin: 8px 10px 0 8px;
   border: none;
