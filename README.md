@@ -98,7 +98,7 @@ All of them live in the `:root` block of `lilypichu.theme.css`.
 | `--popout-width` / `--popout-right` | `320px` / `60px` | Popout size and distance from the window edge |
 | `--border-radius` | `20px` | Corner radius |
 | `--lily-font` | `"Nunito"` | Main font |
-| `--home-icon` | unset | Image for the Home button, e.g. `url("https://...")` |
+| `--home-icon` | unset | Image for the Home button, e.g. `url("https://...")`; local files on Vencord/Equicord: copy into the themes folder and use `url("vencord:///themes/file.png")` |
 | `--profile-themes` | `lily` | `lily` recolors Nitro profile themes (popouts, DM profile, profile modal); `keep` shows each user's colors |
 
 Remove the `overlay.css` import to hide the flowers and corner decorations. In the bundled `dist/lilypichu.theme.css`, delete everything between the `begin dist/overlay.css` and `end dist/overlay.css` comments instead.

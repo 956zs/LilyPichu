@@ -62,7 +62,9 @@
   --lily-font: "Nunito";
 
   /* Custom icon for the Home (Direct Messages) button, any square image.
-     Leave it commented out to keep Discord's icon or your Nitro app icon */
+     Leave it commented out to keep Discord's icon or your Nitro app icon.
+     Local file on Vencord/Equicord: put it in the themes folder and use
+     url("vencord:///themes/my-icon.png") (plain file paths do not load) */
   /* --home-icon: url("https://i.imgur.com/2YhKmJz.png"); */
 
   /* Nitro profile themes: lily recolors profiles with this theme,
