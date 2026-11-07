@@ -18,9 +18,11 @@
   --lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
   --lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
   --lily-interactive-active: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 90%);
-  --lily-hover: #ffffff0d;
-  --lily-selected: #ffffff17;
-  --lily-active: #ffffff21;
+  --lily-hover: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+  --lily-selected: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+  --lily-active: color-mix(in srgb, var(--lily-accent) 26%, transparent);
+  --lily-frame: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 100% 89%);
+  --lily-frame-text: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 31% 42%);
   --app-frame-background: var(--lily-tertiary);
   --background-base-lowest: var(--lily-tertiary);
   --background-base-lower: var(--lily-secondary-alt);
@@ -110,9 +112,11 @@
   --lily-interactive: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a3a42 65%);
   --lily-interactive-hover: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 70%);
   --lily-interactive-active: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
-  --lily-hover: #0000000a;
-  --lily-selected: #00000012;
-  --lily-active: #0000001c;
+  --lily-hover: color-mix(in srgb, var(--lily-accent) 8%, transparent);
+  --lily-selected: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+  --lily-active: color-mix(in srgb, var(--lily-accent) 21%, transparent);
+  --lily-frame: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 100% 89%);
+  --lily-frame-text: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 31% 42%);
   --app-frame-background: var(--lily-tertiary);
   --background-base-lowest: var(--lily-tertiary);
   --background-base-lower: var(--lily-secondary-alt);
@@ -207,9 +211,11 @@
     --lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
     --lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
     --lily-interactive-active: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 90%);
-    --lily-hover: #ffffff0d;
-    --lily-selected: #ffffff17;
-    --lily-active: #ffffff21;
+    --lily-hover: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+    --lily-selected: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+    --lily-active: color-mix(in srgb, var(--lily-accent) 26%, transparent);
+    --lily-frame: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 100% 89%);
+    --lily-frame-text: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 31% 42%);
     --app-frame-background: var(--lily-tertiary);
     --background-base-lowest: var(--lily-tertiary);
     --background-base-lower: var(--lily-secondary-alt);
@@ -303,9 +309,11 @@
     --lily-interactive: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a3a42 65%);
     --lily-interactive-hover: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 70%);
     --lily-interactive-active: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
-    --lily-hover: #0000000a;
-    --lily-selected: #00000012;
-    --lily-active: #0000001c;
+    --lily-hover: color-mix(in srgb, var(--lily-accent) 8%, transparent);
+    --lily-selected: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+    --lily-active: color-mix(in srgb, var(--lily-accent) 21%, transparent);
+    --lily-frame: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 100% 89%);
+    --lily-frame-text: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 31% 42%);
     --app-frame-background: var(--lily-tertiary);
     --background-base-lowest: var(--lily-tertiary);
     --background-base-lower: var(--lily-secondary-alt);
@@ -390,22 +398,37 @@
 }
 
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=bg_], [class*=" bg_"]) {
-  background: var(--background-tertiary-alt, #ffc7d4);
+  background: var(--background-tertiary-alt, var(--lily-frame));
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) {
+  z-index: 1;
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=notice_], [class*=" notice_"]) {
+  margin: 8px 10px 0 8px;
+  border: none;
+  border-radius: var(--border-radius, 20px);
+  box-shadow: none;
 }
 
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]),
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]) :is(.theme-dark, .theme-light) {
-  --text-default: var(--title-bar-text, #8c4a5a);
-  --text-strong: var(--title-bar-text, #8c4a5a);
-  --icon-default: var(--title-bar-text, #8c4a5a);
-  --interactive-icon-default: var(--title-bar-text, #8c4a5a);
-  --interactive-icon-hover: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
-  --interactive-icon-active: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
-  --interactive-text-default: var(--title-bar-text, #8c4a5a);
-  --interactive-text-hover: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
-  --interactive-text-active: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
-  --border-subtle: color-mix(in srgb, var(--title-bar-text, #8c4a5a) 35%, transparent);
-  color: var(--title-bar-text, #8c4a5a);
+  --text-default: var(--title-bar-text, var(--lily-frame-text));
+  --text-strong: var(--title-bar-text, var(--lily-frame-text));
+  --icon-default: var(--title-bar-text, var(--lily-frame-text));
+  --interactive-icon-default: var(--title-bar-text, var(--lily-frame-text));
+  --interactive-icon-hover: color-mix(in srgb, var(--title-bar-text, var(--lily-frame-text)), black 25%);
+  --interactive-icon-active: color-mix(in srgb, var(--title-bar-text, var(--lily-frame-text)), black 25%);
+  --interactive-text-default: var(--title-bar-text, var(--lily-frame-text));
+  --interactive-text-hover: color-mix(in srgb, var(--title-bar-text, var(--lily-frame-text)), black 25%);
+  --interactive-text-active: color-mix(in srgb, var(--title-bar-text, var(--lily-frame-text)), black 25%);
+  --border-subtle: color-mix(in srgb, var(--title-bar-text, var(--lily-frame-text)) 35%, transparent);
+  color: var(--title-bar-text, var(--lily-frame-text));
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) {
+  background: var(--lily-tertiary);
 }
 
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) {
@@ -468,6 +491,9 @@ main:is([class^=chatContent_], [class*=" chatContent_"]) {
   }
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]) {
     z-index: 2;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=notice_], [class*=" notice_"]) {
+    margin-right: calc(var(--popout-width, 320px) + var(--popout-right, 60px) + 70px);
   }
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=layer_], [class*=" layer_"]):not(:is([class^=baseLayer_], [class*=" baseLayer_"])) {
     z-index: 3;
