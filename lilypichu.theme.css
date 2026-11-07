@@ -3,7 +3,7 @@
 * @author nlcat
 * @authorLink https://github.com/956zs
 * @description A theme based on @Melonturtle_ stream design. Original by NYRI4, continued by Pink Serenity
-* @version 2.2.0
+* @version 2.3.0
 * @source https://github.com/956zs/LilyPichu
 * @updateUrl https://raw.githubusercontent.com/956zs/LilyPichu/main/lilypichu.theme.css
 */
@@ -60,6 +60,10 @@
   /* Main font; CJK text uses the system font for your language. Any font
      works if you @import it, e.g. "Huninn" from Google Fonts */
   --lily-font: "Nunito";
+
+  /* Custom icon for the Home (Direct Messages) button, any square image.
+     Leave it commented out to keep Discord's icon or your Nitro app icon */
+  /* --home-icon: url("https://i.imgur.com/2YhKmJz.png"); */
 
   /* Nitro profile themes: lily recolors profiles with this theme,
      keep shows each user's own profile colors */

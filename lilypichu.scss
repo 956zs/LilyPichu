@@ -30,6 +30,22 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	z-index: 1;
 }
 
+// Optional custom Home button icon (--home-icon in lilypichu.theme.css).
+// Unset, the layer is transparent and Discord's icon, or the Nitro app icon,
+// shows through. The button's SVG mask still gives the image the rounded
+// shape and the cutout for the unread badge, which sits outside the mask.
+[data-list-item-id="guildsnav___home"] #{s.c(childWrapper)} {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: var(--home-icon, none) center / cover no-repeat;
+		pointer-events: none;
+	}
+}
+
 // App notices ("How is ... working for you?") float as a rounded bar above
 // the card instead of a full-width strip
 #{s.$base} > #{s.c(notice)} {
