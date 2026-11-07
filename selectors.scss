@@ -30,9 +30,11 @@ $chatContent: 'main#{c(chatContent)}';
 // Text channels put the member list after main.chatContent_, forums after
 // their own container_, so match on the shared parent
 $chatBody: '#{c(chat)} > #{c(content)}';
-$memberList: '#{$chatBody} > #{c(container)}:has(> aside#{c(membersWrap)})';
-$membersWrap: '#{$memberList} > aside#{c(membersWrap)}';
-$members: '#{$membersWrap} > #{c(members)}';
+// Threads and forum posts skip the container: the wrap itself is the list
+$threadMemberList: '#{$chatBody} > div#{c(membersWrap)}';
+$memberList: ':is(#{$chatBody} > #{c(container)}:has(> aside#{c(membersWrap)}), #{$threadMemberList})';
+$membersWrap: '#{$chatBody} > #{c(container)} > aside#{c(membersWrap)}';
+$members: ':is(#{$membersWrap}, #{$threadMemberList}) > #{c(members)}';
 $profileSidebar: '#{$chatBody} > aside:has(> .user-profile-sidebar)';
 $nowPlaying: '#{c(tabBody)} > #{c(nowPlayingColumn)}';
 $accountBar: '#{$panels} > #{c(container)}:last-child';
