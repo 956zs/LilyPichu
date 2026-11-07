@@ -95,6 +95,8 @@
   --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
   --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
   --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+  --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
+  --spine-default: var(--lily-accent);
   --focus-primary: var(--lily-accent);
   --border-focus: var(--lily-accent);
   --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -205,6 +207,8 @@
   --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
   --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
   --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+  --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
+  --spine-default: var(--lily-accent);
   --focus-primary: var(--lily-accent);
   --border-focus: var(--lily-accent);
   --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -320,6 +324,8 @@
     --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
     --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
     --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+    --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
+    --spine-default: var(--lily-accent);
     --focus-primary: var(--lily-accent);
     --border-focus: var(--lily-accent);
     --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -434,6 +440,8 @@
     --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
     --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
     --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+    --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
+    --spine-default: var(--lily-accent);
     --focus-primary: var(--lily-accent);
     --border-focus: var(--lily-accent);
     --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -1014,6 +1022,103 @@ form :is([class^=channelTextArea_], [class*=" channelTextArea_"]):focus-within {
 .full-motion :is([class^=reaction_], [class*=" reaction_"]),
 .full-motion :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) > :is([class^=members_], [class*=" members_"]) [role=listitem],
 .full-motion form :is([class^=channelTextArea_], [class*=" channelTextArea_"]) {
+  transition: background 150ms ease, box-shadow 200ms ease;
+}
+
+:is([class^=markup_], [class*=" markup_"]) pre {
+  border-radius: calc(var(--border-radius, 20px) * 0.6);
+}
+
+:is([class^=markup_], [class*=" markup_"]) pre > code {
+  border: none;
+  border-radius: calc(var(--border-radius, 20px) * 0.6);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 20%, transparent);
+}
+
+:is([class^=markup_], [class*=" markup_"]) code.inline {
+  border: none;
+  border-radius: 6px;
+  padding-inline: 0.35em;
+  background: color-mix(in srgb, var(--lily-accent) 16%, var(--lily-secondary-alt));
+  color: var(--lily-text-strong);
+}
+
+:is([class^=blockquoteDivider_], [class*=" blockquoteDivider_"]) {
+  box-shadow: 0 0 8px -1px var(--spine-default);
+}
+
+[data-list-item-id^=chat-messages___divider] {
+  --divider-color: var(--lily-accent);
+  border-top-color: transparent;
+  border-image: linear-gradient(90deg, transparent, color-mix(in srgb, var(--lily-accent) 40%, transparent), transparent) 1;
+}
+
+[data-list-item-id^=chat-messages___divider] > :is([class^=content_], [class*=" content_"]) {
+  padding: 1px 10px;
+  border-radius: 999px;
+  background: var(--lily-primary);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 30%, transparent);
+  color: var(--lily-accent-text);
+}
+
+[data-list-item-id^=chat-messages___divider]:is([class^=isUnread_], [class*=" isUnread_"]) {
+  border-image: linear-gradient(90deg, transparent, var(--lily-accent) 30%, var(--lily-accent) 70%, transparent) 1;
+}
+
+[data-list-item-id^=chat-messages___divider]:is([class^=isUnread_], [class*=" isUnread_"]) > :is([class^=content_], [class*=" content_"]) {
+  box-shadow: inset 0 0 0 1px var(--lily-accent);
+}
+
+li:is([class^=itemContainer_], [class*=" itemContainer_"]) > [role=link]:is([class^=item_], [class*=" item_"]) {
+  border-radius: 999px;
+}
+
+li:is([class^=itemContainer_], [class*=" itemContainer_"]) > [role=link]:is([class^=item_], [class*=" item_"]):is([class^=active_], [class*=" active_"]) {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--lily-accent) 34%, transparent), color-mix(in srgb, var(--lily-accent) 12%, transparent));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 40%, transparent);
+}
+
+[role=tablist]:is([class^=side_], [class*=" side_"]) > [role=tab]:is([class^=item_], [class*=" item_"]) {
+  border-radius: 999px;
+}
+
+[role=tablist]:is([class^=side_], [class*=" side_"]) > [role=tab]:is([class^=item_], [class*=" item_"]):is([class^=selected_], [class*=" selected_"]) {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--lily-accent) 34%, transparent), color-mix(in srgb, var(--lily-accent) 12%, transparent));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 40%, transparent);
+}
+
+[role=tablist]:is([class^=side_], [class*=" side_"]) > :is([class^=header_], [class*=" header_"]) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+[role=tablist]:is([class^=side_], [class*=" side_"]) > :is([class^=header_], [class*=" header_"])::before {
+  content: "✿";
+  color: var(--lily-accent);
+}
+
+:is([class^=subnav_], [class*=" subnav_"]) :is([class^=thumb_], [class*=" thumb_"]) {
+  background-color: var(--lily-accent);
+}
+
+:is([class^=sectionLabel_], [class*=" sectionLabel_"]) > h3::before {
+  content: "✿ ";
+  color: var(--lily-accent);
+}
+
+#channels :is(:is([class^=voiceUser_], [class*=" voiceUser_"]), :is([class^=listDefault_], [class*=" listDefault_"])) :is([class^=content_], [class*=" content_"]) {
+  border-radius: 999px;
+}
+
+:is([class^=speaking_], [class*=" speaking_"]) :is([class^=avatarSpeakingOutline_], [class*=" avatarSpeakingOutline_"]) {
+  outline-color: var(--lily-accent);
+}
+
+.full-motion li:is([class^=itemContainer_], [class*=" itemContainer_"]) > [role=link]:is([class^=item_], [class*=" item_"]),
+.full-motion [role=tablist]:is([class^=side_], [class*=" side_"]) > [role=tab]:is([class^=item_], [class*=" item_"]),
+.full-motion li[id^=chat-messages] > :is([class^=message_], [class*=" message_"]),
+.full-motion #channels :is(:is([class^=voiceUser_], [class*=" voiceUser_"]), :is([class^=listDefault_], [class*=" listDefault_"])) :is([class^=content_], [class*=" content_"]) {
   transition: background 150ms ease, box-shadow 200ms ease;
 }
 
