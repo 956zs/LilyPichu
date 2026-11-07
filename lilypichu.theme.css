@@ -25,8 +25,9 @@
      yellow #fdd046, green #5e9846, cyan #41c7c1, blue #3e64c7, purple #9050b8 */
   --base-color-light: #fd8787;
 
-  /* Buttons, toggles and other brand-colored controls */
-  --accent-color: #c5536c;
+  /* Buttons, toggles and other brand-colored controls. Derived from the
+     base color by default; uncomment to pick your own */
+  /* --accent-color: #c5536c; */
 
   /* App background. For an image: url("image-link") center / cover */
   --background-tertiary-alt: #ffc7d4;
@@ -49,6 +50,10 @@
   /* Border radius for the whole theme */
   --border-radius: 20px;
 
-  /* Main font; CJK text falls back to Noto Sans CJK */
+  /* Main font; CJK text uses the system font for your language */
   --lily-font: "Nunito";
+
+  /* Nitro profile themes: lily recolors profiles with this theme,
+     keep shows each user's own profile colors */
+  --profile-themes: lily;
 }

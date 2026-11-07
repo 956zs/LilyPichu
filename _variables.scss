@@ -15,7 +15,8 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--lily-secondary-alt: color-mix(in srgb, #{$dark} 53%, black);
 	--lily-tertiary: color-mix(in srgb, #{$dark} 31%, black);
 	--lily-floating: color-mix(in srgb, #{$dark} 30%, black);
-	--lily-accent: var(--accent-color, #c5536c);
+	// #c5536c for the default base; presets get a matching accent
+	--lily-accent: var(--accent-color, hsl(from #{$dark} h calc(s * 1.85) 55%));
 	--lily-accent-text: color-mix(in srgb, var(--lily-accent), white 45%);
 
 	--lily-text: color-mix(in srgb, #{$dark}, white 82%);
@@ -120,20 +121,55 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--scrollbar-thin-track: transparent;
 }
 
-// `html` raises specificity above Discord's own `.theme-dark` rules, which
-// are also set on inner elements (title bar, popouts, profile cards).
-html.theme-dark,
-html .theme-dark,
-html.theme-darker,
-html .theme-darker,
-html.theme-midnight,
-html .theme-midnight {
+// `:root` raises specificity above Discord's own `.theme-dark` rules (also
+// set on inner elements: title bar, popouts, profile cards) and ties
+// `.high-contrast-mode .theme-dark`, which loads earlier.
+:root.theme-dark,
+:root .theme-dark,
+:root.theme-darker,
+:root .theme-darker,
+:root.theme-midnight,
+:root .theme-midnight {
 	@include dark-palette;
 	@include tokens;
 }
 
-html.theme-light,
-html .theme-light {
+:root.theme-light,
+:root .theme-light {
 	@include light-palette;
 	@include tokens;
+}
+
+// Nitro profile themes paint popouts, the DM profile and the profile modal in
+// each user's own colors (inline --profile-gradient-* plus token overrides at
+// `:root .custom-user-profile-theme.theme-*`). Recolor them with the palette;
+// set --profile-themes: keep in lilypichu.theme.css to show users' colors.
+// A light profile theme marks the card .theme-light, so the palette follows
+// the app's mode instead of the card's class.
+@mixin profile-colors {
+	--profile-gradient-primary-color: var(--lily-secondary) !important;
+	--profile-gradient-secondary-color: var(--lily-secondary-alt) !important;
+	--profile-gradient-overlay-color: var(--lily-primary) !important;
+	--profile-gradient-modal-background-color: var(--lily-secondary-alt) !important;
+	--profile-gradient-button-color: var(--lily-accent) !important;
+}
+
+:root {
+	--profile-themes: lily;
+}
+
+@container style(--profile-themes: lily) {
+	:root:is(.theme-dark, .theme-darker, .theme-midnight) .custom-user-profile-theme:is(.theme-dark, .theme-light),
+	:root:is(.theme-dark, .theme-darker, .theme-midnight) .custom-user-profile-theme .theme-light {
+		@include dark-palette;
+		@include tokens;
+		@include profile-colors;
+	}
+
+	:root.theme-light .custom-user-profile-theme:is(.theme-dark, .theme-light),
+	:root.theme-light .custom-user-profile-theme .theme-dark {
+		@include light-palette;
+		@include tokens;
+		@include profile-colors;
+	}
 }
