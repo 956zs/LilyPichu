@@ -8,6 +8,9 @@ on:
 jobs:
   build_css:
     runs-on: ubuntu-latest
+    # Commits the built CSS to the debug branch; repos default to a read-only token
+    permissions:
+      contents: write
 
     steps:
       # The pushed commit; a fixed ref: main built stale sources on other branches
