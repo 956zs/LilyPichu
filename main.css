@@ -543,7 +543,7 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]) {
     z-index: 2;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])),
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
     margin: 8px 8px 8px 0;
     border-radius: var(--border-radius, 20px);
@@ -557,11 +557,11 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar):has(> .custom-profile-frame) {
     margin: 56px 18px 52px 10px;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]),
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) {
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]),
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) > :is([class^=members_], [class*=" members_"]) {
     background-color: transparent;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) [role=listitem] {
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) > :is([class^=members_], [class*=" members_"]) [role=listitem] {
     border-radius: var(--border-radius, 20px);
   }
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) {
@@ -595,7 +595,7 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > :is([class^=sidebarList_], [class*=" sidebarList_"]) {
     border-radius: 0;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])),
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]),
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar),
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::before,
@@ -628,19 +628,19 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
     background: var(--jumping-gif) bottom/40% no-repeat;
     pointer-events: none;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])),
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]),
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
     z-index: 3;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])),
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]) {
     top: 280px;
     bottom: 163px;
     overflow: visible;
     background-color: var(--lily-primary);
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"]))::before,
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"]))::before,
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"])::before {
     content: var(--member-list-title, "Member list");
     position: absolute;
@@ -658,7 +658,7 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
     background-color: var(--lily-secondary);
     border-radius: var(--border-radius, 20px) var(--border-radius, 20px) 0 0;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"]))::after,
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"]))::after,
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"])::after {
     content: "";
     position: absolute;
@@ -680,17 +680,17 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]) > aside > :is([class^=scroller_], [class*=" scroller_"]) > :is([class^=content_], [class*=" content_"]) > h2:first-child {
     display: none;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]),
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) {
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]),
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) > :is([class^=members_], [class*=" members_"]) {
     width: 100%;
     min-width: 0;
     height: 100%;
     background-color: transparent;
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) {
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) {
     --custom-member-list-width: var(--popout-width, 320px);
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) [role=listitem] {
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) > :is([class^=members_], [class*=" members_"]) [role=listitem] {
     border-radius: var(--border-radius, 20px);
   }
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
@@ -754,7 +754,7 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
       overflow: hidden;
       background: var(--lily-secondary);
     }
-    :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+    :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])),
     :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]) {
       bottom: calc(anchor(--lily-panels top) + 45px);
       min-height: 120px;
@@ -856,7 +856,7 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
   main:is([class^=chatContent_], [class*=" chatContent_"]) {
     background: linear-gradient(var(--gradient-angle, 160deg), var(--lily-primary), color-mix(in oklab, var(--lily-primary), hsl(from var(--lily-primary) calc(h + var(--gradient-shift, -45)) s l) calc(var(--gradient-strength, 60%) / 2)));
   }
-  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])),
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]),
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]),
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) > :is([class^=container_], [class*=" container_"]):last-child {
