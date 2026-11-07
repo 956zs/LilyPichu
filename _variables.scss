@@ -26,9 +26,13 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
 	--lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
 	--lily-interactive-active: color-mix(in srgb, #{$dark}, white 90%);
-	--lily-hover: #ffffff0d;
-	--lily-selected: #ffffff17;
-	--lily-active: #ffffff21;
+	--lily-hover: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+	--lily-selected: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+	--lily-active: color-mix(in srgb, var(--lily-accent) 26%, transparent);
+
+	// The pink frame and its title bar text; hsl(346 100% 89%) is #ffc7d4
+	--lily-frame: hsl(from #{$dark} h 100% 89%);
+	--lily-frame-text: hsl(from #{$dark} h 31% 42%);
 }
 
 @mixin light-palette {
@@ -47,9 +51,12 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--lily-interactive: color-mix(in srgb, #{$light}, #5a3a42 65%);
 	--lily-interactive-hover: color-mix(in srgb, #{$light}, #3a2a2e 70%);
 	--lily-interactive-active: color-mix(in srgb, #{$light}, #1e1416 80%);
-	--lily-hover: #0000000a;
-	--lily-selected: #00000012;
-	--lily-active: #0000001c;
+	--lily-hover: color-mix(in srgb, var(--lily-accent) 8%, transparent);
+	--lily-selected: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+	--lily-active: color-mix(in srgb, var(--lily-accent) 21%, transparent);
+
+	--lily-frame: hsl(from #{$light} h 100% 89%);
+	--lily-frame-text: hsl(from #{$light} h 31% 42%);
 }
 
 // Discord's semantic tokens (2026 naming). Old names such as
