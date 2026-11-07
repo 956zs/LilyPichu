@@ -3,7 +3,7 @@
 * @author nlcat
 * @authorLink https://github.com/956zs
 * @description A theme based on @Melonturtle_ stream design. Original by NYRI4, continued by Pink Serenity
-* @version 2.3.0
+* @version 2.4.0
 * @source https://github.com/956zs/LilyPichu
 * @updateUrl https://raw.githubusercontent.com/956zs/LilyPichu/main/lilypichu.theme.css
 */
@@ -51,6 +51,23 @@
   --activity-title: "Active now";
   --popout-width: 320px;
   --popout-right: 60px;
+
+  /* --- Effects (the LilyPichuSettings Equicord plugin sets these from a panel) --- */
+
+  /* Gradients on the frame, lists, chat and popout. Shift turns the hue at
+     the far end (negative goes toward purple) */
+  /* --gradients: on; */
+  /* --gradient-shift: -45; */
+  /* --gradient-strength: 60%; */
+  /* --gradient-angle: 160deg; */
+
+  /* Image around the window instead of the frame color, blurred and dimmed */
+  /* --background-image: url("image-link"); */
+  /* --background-blur: 12px; */
+  /* --background-dim: 25%; */
+
+  /* Hide the flowers, sparkles and corners */
+  /* --decorations: off; */
 
   /* --- Other --- */
 

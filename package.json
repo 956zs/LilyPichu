@@ -1,6 +1,6 @@
 {
   "name": "lilypichu",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "description": "A theme based on @Melonturtle_ stream design",
   "engines": {
     "node": ">=18.0.0"

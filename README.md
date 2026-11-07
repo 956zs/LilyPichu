@@ -12,6 +12,11 @@
 </div>
 <br/>
 
+## 2.4
+
+- Gradients (`--gradients: on`, with shift, strength and angle), a background image with blur and dim, and `--decorations: off`.
+- Everything can be set from a panel with the [LilyPichuSettings](https://github.com/956zs/Equicord-Plugin) Equicord plugin.
+
 ## 2.3
 
 - `--home-icon`: any image for the Home (Direct Messages) button, keeping its rounded shape and the unread badge cutout. Unset, Discord's icon or your Nitro app icon shows.
@@ -98,6 +103,9 @@ All of them live in the `:root` block of `lilypichu.theme.css`.
 | `--popout-width` / `--popout-right` | `320px` / `60px` | Popout size and distance from the window edge |
 | `--border-radius` | `20px` | Corner radius |
 | `--lily-font` | `"Nunito"` | Main font |
+| `--gradients` / `--gradient-shift` / `--gradient-strength` / `--gradient-angle` | `off` / `-45` / `60%` / `160deg` | Gradients on the frame, lists, chat and popout |
+| `--background-image` / `--background-blur` / `--background-dim` | `none` / `0px` / `0%` | Image around the window, blurred and dimmed |
+| `--decorations` | `on` | `off` hides the flowers and corners |
 | `--home-icon` | unset | Image for the Home button, e.g. `url("https://...")`; local files on Vencord/Equicord: copy into the themes folder and use `url("vencord:///themes/file.png")` |
 | `--profile-themes` | `lily` | `lily` recolors Nitro profile themes (popouts, DM profile, profile modal); `keep` shows each user's colors |
 
