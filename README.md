@@ -1,18 +1,14 @@
-<img align="right" src="https://nyri4.github.io/LilyPichu/assets/preview.png" alt="Preview" width="40%">
+<img align="right" src="assets/preview.png" alt="Preview" width="40%">
 
 <div align="left">
   <img align="left" src="https://i.imgur.com/2YhKmJz.png" alt="Logo" width="80" height="80">
 
   <h3 align="left">LilyPichu+</h3>
-  <p align="left">Fork of NYRI4/LilyPichu: A theme based on @Melonturtle_ stream design</p>
+  <p align="left">A theme based on @Melonturtle_ stream design. Maintained fork of <a href="https://github.com/PinkSerenity/LilyPichu">PinkSerenity/LilyPichu</a>, originally <a href="https://github.com/NYRI4/LilyPichu">NYRI4/LilyPichu</a>.</p>
 
   <br/>
 
-  <a href="https://gibbu.github.io/ThemePreview/?file=https://cdn.jsdelivr.net/gh/NYRI4/LilyPichu/lilypichu.theme.css"><strong>» Theme Preview</strong></a>
-  ・
-  <a href="https://github.com/PinkSerenity/LilyPichu/issues"><del>Report an issue</del></a> (closed until I have completely refactored it)
-  ・
-  <a href="https://discord.gg/comfy-camp-811203761619337259">Join the support server</a>
+  <a href="https://github.com/956zs/LilyPichu/issues"><strong>» Report an issue</strong></a>
 </div>
 <br/>
 
@@ -29,13 +25,15 @@ Ported to Discord's current layout and class names:
 
 The partials for the old layout are kept in `old/` for reference; they are not built.
 
+Pushes to `main` publish the built CSS to the `release` branch, which the theme file imports. Other branches publish to `debug` for testing: replace `refs/heads/release` with `refs/heads/debug` in the two imports to try them.
+
 ## 📥 Installation
 
 <br/>
 <div align="left">
     <img align="left" src="https://i.imgur.com/LPH05EO.png" alt="BetterDiscord" width="45" height="45">
     <b><p align="left">BetterDiscord</b>
-    <br/>Open Settings > Themes > Themes folder and copy the file downloaded <a href="https://betterdiscord.app/theme/LilyPichu">here</a></p>
+    <br/>Open Settings > Themes > Themes folder and put <a href="https://raw.githubusercontent.com/956zs/LilyPichu/main/lilypichu.theme.css"><code>lilypichu.theme.css</code></a> in it</p>
 </div>
 
 <!-- <div align="left">
@@ -46,8 +44,8 @@ The partials for the old layout are kept in `old/` for reference; they are not b
 
 <div align="left">
     <img align="left" src="https://i.imgur.com/fXYKU5q.png" alt="Vencord" width="45" height="45">
-    <b><p align="left">Vencord</b>
-    <br/>Copy <code>https://raw.githubusercontent.com/PinkSerenity/LilyPichu/refs/heads/main/lilypichu.theme.css</code> into the box in Settings > Themes > Themes tab</p>
+    <b><p align="left">Vencord / Equicord</b>
+    <br/>Copy <code>https://raw.githubusercontent.com/956zs/LilyPichu/refs/heads/main/lilypichu.theme.css</code> into the box in Settings > Themes > Online Themes. To customize, download the file into the themes folder instead and edit it</p>
 </div><br/>
 
 ## 🖌️ Customization

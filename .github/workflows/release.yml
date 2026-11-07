@@ -34,10 +34,11 @@ jobs:
           cp dist/overlay.css /tmp/LilyPichu/stuff/overlay.css
           cp dist/main.css /tmp/LilyPichu/main.css
 
+      # main publishes to release (what the theme file imports), anything else to debug
       - name: Checkout destination Git branch
         uses: actions/checkout@v2
         with:
-            ref: debug
+            ref: ${{ github.ref == 'refs/heads/main' && 'release' || 'debug' }}
             fetch-depth: 1
 
       - name: Move CSS to destination Git branch
