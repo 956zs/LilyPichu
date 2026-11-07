@@ -293,9 +293,13 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		border-radius: $radius;
 		background: transparent;
 
+		// Discord gives the card a fixed 300px; the gap to the 320px popout
+		// showed the empty state behind it as a dark frame
 		.user-profile-sidebar {
 			margin: 0;
 			padding: 0;
+			width: 100%;
+			max-width: none;
 			height: 100%;
 			overflow: hidden;
 			border-radius: $radius;
