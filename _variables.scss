@@ -140,10 +140,27 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
 	--brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
 
-	--scrollbar-auto-thumb: var(--lily-tertiary);
-	--scrollbar-auto-track: var(--lily-secondary-alt);
-	--scrollbar-thin-thumb: var(--lily-tertiary);
+	// Keyboard focus rings (Discord's default is blue)
+	--focus-primary: var(--lily-accent);
+	--border-focus: var(--lily-accent);
+
+	// Scrollbars: translucent accent thumbs
+	--scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
+	--scrollbar-auto-track: transparent;
+	--scrollbar-thin-thumb: color-mix(in srgb, var(--lily-accent) 40%, transparent);
 	--scrollbar-thin-track: transparent;
+	--scrollbar-auto-scrollbar-color-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
+	--scrollbar-auto-scrollbar-color-track: transparent;
+
+	// Reactions: soft chips, yours filled with the accent
+	--reaction-background-default: color-mix(in srgb, var(--lily-accent) 10%, var(--lily-secondary-alt));
+	--reaction-background-hover: color-mix(in srgb, var(--lily-accent) 18%, var(--lily-secondary-alt));
+	--reaction-border-default: transparent;
+	--reaction-border-hover: color-mix(in srgb, var(--lily-accent) 35%, transparent);
+	--reaction-background-reacted-default: color-mix(in srgb, var(--lily-accent) 30%, var(--lily-secondary-alt));
+	--reaction-background-reacted-hover: color-mix(in srgb, var(--lily-accent) 38%, var(--lily-secondary-alt));
+	--reaction-border-reacted-default: color-mix(in srgb, var(--lily-accent) 70%, transparent);
+	--reaction-text-reacted-default: var(--lily-text-strong);
 }
 
 // `:root` raises specificity above Discord's own `.theme-dark` rules (also
