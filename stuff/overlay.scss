@@ -5,6 +5,8 @@
   position: fixed;
   z-index: 1;
   pointer-events: none;
+  // e.g. hue-rotate(-124deg) for the blue preset, see lilypichu.theme.css
+  filter: var(--decoration-filter, none);
 }
 
 // Narrow windows: only the corner and the bottom strip, both behind the card

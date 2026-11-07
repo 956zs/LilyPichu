@@ -12,6 +12,13 @@
 </div>
 <br/>
 
+## 2.1
+
+- The pink frame and the title bar text follow the base color, and `--decoration-filter` recolors the corner decorations, so every preset looks consistent.
+- Hover and selected rows in lists are tinted with the accent.
+- App notices float as a rounded bar above the card.
+- Fixed: a pink hole around the voice / stream panels, and a flash when full-screen settings close.
+
 ## 2.0 (November 2026)
 
 Ported to Discord's current layout and class names:

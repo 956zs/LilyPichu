@@ -3,7 +3,7 @@
 * @author nlcat
 * @authorLink https://github.com/956zs
 * @description A theme based on @Melonturtle_ stream design. Original by NYRI4, continued by Pink Serenity
-* @version 2.0.0
+* @version 2.1.0
 * @source https://github.com/956zs/LilyPichu
 * @updateUrl https://raw.githubusercontent.com/956zs/LilyPichu/main/lilypichu.theme.css
 */
@@ -30,11 +30,17 @@
      base color by default; uncomment to pick your own */
   /* --accent-color: #c5536c; */
 
-  /* App background. For an image: url("image-link") center / cover */
-  --background-tertiary-alt: #ffc7d4;
+  /* App background and title bar text. Both follow the base color by
+     default (#ffc7d4 / #8c4a5a for the default); uncomment to override.
+     For an image: url("image-link") center / cover */
+  /* --background-tertiary-alt: #ffc7d4; */
+  /* --title-bar-text: #8c4a5a; */
 
-  /* Text and icons in the title bar (they sit on the background) */
-  --title-bar-text: #8c4a5a;
+  /* Recolors the corner and strip decorations to match a preset:
+     pink hue-rotate(-14deg), orange hue-rotate(34deg), yellow hue-rotate(56deg),
+     green hue-rotate(117deg), cyan hue-rotate(-167deg), blue hue-rotate(-124deg),
+     purple hue-rotate(-73deg) */
+  --decoration-filter: none;
 
   /* --- Right popout --- */
 
