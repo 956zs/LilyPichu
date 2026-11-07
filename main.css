@@ -398,10 +398,6 @@
   --font-display: var(--lily-font, "Nunito"), "gg sans", sans-serif;
 }
 
-#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=bg_], [class*=" bg_"]) {
-  background: var(--background-tertiary-alt, var(--lily-frame));
-}
-
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) {
   z-index: 1;
 }
@@ -798,4 +794,56 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
 .user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) img,
 .user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) :is([class^=avatarStack_], [class*=" avatarStack_"]) {
   border-radius: var(--border-radius, 20px);
+}
+
+:root {
+  --gradients: off;
+  --background-image: none;
+  --decorations: on;
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) {
+  background: var(--background-image) center/cover no-repeat, var(--background-tertiary-alt, var(--lily-frame));
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=bg_], [class*=" bg_"]) {
+  background: transparent;
+}
+
+@container not style(--background-image: none) {
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=bg_], [class*=" bg_"]) {
+    background: color-mix(in srgb, black var(--background-dim, 0%), transparent);
+    backdrop-filter: blur(var(--background-blur, 0px));
+  }
+}
+@container style(--gradients: on) {
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) {
+    background: var(--background-image) center/cover no-repeat, var(--background-tertiary-alt, linear-gradient(135deg, var(--lily-frame), color-mix(in oklab, var(--lily-frame), hsl(from var(--lily-frame) calc(h + var(--gradient-shift, -45)) s l) 70%)));
+  }
+  #app-mount {
+    --background-gradient-app-frame: linear-gradient(180deg, var(--lily-tertiary), color-mix(in oklab, var(--lily-tertiary), hsl(from var(--lily-tertiary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+    --background-gradient-lowest: linear-gradient(var(--gradient-angle, 160deg), var(--lily-tertiary), color-mix(in oklab, var(--lily-tertiary), hsl(from var(--lily-tertiary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+    --background-gradient-lower: linear-gradient(var(--gradient-angle, 160deg), var(--lily-secondary-alt), color-mix(in oklab, var(--lily-secondary-alt), hsl(from var(--lily-secondary-alt) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+    --background-gradient-low: linear-gradient(var(--gradient-angle, 160deg), var(--lily-secondary), color-mix(in oklab, var(--lily-secondary), hsl(from var(--lily-secondary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+    --background-gradient-high: linear-gradient(180deg, var(--lily-secondary), color-mix(in oklab, var(--lily-secondary), hsl(from var(--lily-secondary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+    --background-gradient-higher: linear-gradient(var(--gradient-angle, 160deg), color-mix(in srgb, var(--lily-secondary), var(--lily-primary)), color-mix(in oklab, color-mix(in srgb, var(--lily-secondary), var(--lily-primary)), hsl(from color-mix(in srgb, var(--lily-secondary), var(--lily-primary)) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+    --background-gradient-highest: linear-gradient(var(--gradient-angle, 160deg), var(--lily-primary), color-mix(in oklab, var(--lily-primary), hsl(from var(--lily-primary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+    --background-gradient-chat: linear-gradient(180deg, var(--lily-primary), color-mix(in oklab, var(--lily-primary), hsl(from var(--lily-primary) calc(h + var(--gradient-shift, -45)) s l) calc(var(--gradient-strength, 60%) / 2)));
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]),
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) {
+    background: linear-gradient(180deg, var(--lily-tertiary), color-mix(in oklab, var(--lily-tertiary), hsl(from var(--lily-tertiary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > :is([class^=sidebarList_], [class*=" sidebarList_"]) {
+    background: linear-gradient(180deg, var(--lily-secondary), color-mix(in oklab, var(--lily-secondary), hsl(from var(--lily-secondary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+  }
+  main:is([class^=chatContent_], [class*=" chatContent_"]) {
+    background: linear-gradient(var(--gradient-angle, 160deg), var(--lily-primary), color-mix(in oklab, var(--lily-primary), hsl(from var(--lily-primary) calc(h + var(--gradient-shift, -45)) s l) calc(var(--gradient-strength, 60%) / 2)));
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]),
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]),
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) > :is([class^=container_], [class*=" container_"]):last-child {
+    background: linear-gradient(180deg, var(--lily-primary), color-mix(in oklab, var(--lily-primary), hsl(from var(--lily-primary) calc(h + var(--gradient-shift, -45)) s l) var(--gradient-strength, 60%)));
+  }
 }
