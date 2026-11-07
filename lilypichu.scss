@@ -22,6 +22,14 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	background: var(--background-tertiary-alt, #ffc7d4);
 }
 
+// Discord fades the base layer in and out (inline opacity) around full-screen
+// layers such as server settings. Opacity below 1 turns it into a stacking
+// context, which drops the card under the decorations until the fade ends:
+// a flash. A permanent stacking context keeps the order fixed.
+#{s.$baseLayer} {
+	z-index: 1;
+}
+
 // The title bar sits on the pink background, so it needs dark text
 #{s.$titleBar},
 #{s.$titleBar} :is(.theme-dark, .theme-light) {
