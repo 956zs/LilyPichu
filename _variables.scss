@@ -115,6 +115,19 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--switch-background-selected-default: var(--lily-accent);
 	--switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
 
+	// Mentions in the accent, replies and jump highlights a little cooler
+	--lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
+	--message-mentioned-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 20%);
+	--message-mentioned-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 27%);
+	--message-highlight-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 14%);
+	--message-highlight-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 20%);
+	--mention-background: color-mix(in srgb, var(--lily-accent) 28%, transparent);
+	--mention-foreground: var(--lily-accent-text);
+	--brand-05a: color-mix(in srgb, var(--lily-accent) 5%, transparent);
+	--brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+	--brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+	--brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+
 	--scrollbar-auto-thumb: var(--lily-tertiary);
 	--scrollbar-auto-track: var(--lily-secondary-alt);
 	--scrollbar-thin-thumb: var(--lily-tertiary);

@@ -37,6 +37,10 @@ $profileSidebar: '#{$chatBody} > aside:has(> .user-profile-sidebar)';
 $nowPlaying: '#{c(tabBody)} > #{c(nowPlayingColumn)}';
 $accountBar: '#{$panels} > #{c(container)}:last-child';
 
+// Messages
+$message: '#{c(message)}';
+$mentioned: '#{c(mentioned)}';
+
 // Profile cards: the banner and avatar sit in the card's own header
 $popoutHeader: '.user-profile-popout > #{c(inner)} > #{c(header)}';
 $sidebarHeader: '.user-profile-sidebar > #{c(inner)} > * > #{c(header)}';

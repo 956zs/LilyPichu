@@ -54,6 +54,50 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	background: var(--lily-primary);
 }
 
+// The bar beside a mention uses the warning color; the token also colors
+// every warning icon, so only this bar changes
+#{s.$message}#{s.$mentioned}::before {
+	background: var(--lily-accent);
+}
+
+// Narrow or short windows: no popout, but the card, frame and title bar
+// keep the look; the member list and DM profile become inset cards
+@media (max-width: 1349.98px), (max-height: 639.98px) {
+	#{s.$content} {
+		position: relative;
+		z-index: 1;
+		margin: 10px 10px 10px 0;
+		border-radius: 0 $radius $radius 0;
+		overflow: hidden;
+	}
+
+	#{s.$titleBar} {
+		z-index: 2;
+	}
+
+	#{s.$memberList},
+	#{s.$profileSidebar} {
+		margin: 8px 8px 8px 0;
+		border-radius: $radius;
+		overflow: hidden;
+		background-color: var(--lily-secondary);
+	}
+
+	#{s.$membersWrap},
+	#{s.$members} {
+		background-color: transparent;
+	}
+
+	#{s.$members} [role="listitem"] {
+		border-radius: $radius;
+	}
+
+	#{s.$panels} {
+		border: none;
+		border-radius: $radius;
+	}
+}
+
 // Right popout: member list, DM profile and friends activity float in a card
 // on the right; "Stay comfy" and the jumping GIF fill it when there is nothing.
 @media (min-width: 1350px) and (min-height: 640px) {
