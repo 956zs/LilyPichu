@@ -15,20 +15,19 @@ jobs:
           fetch-depth: 10
           submodules: true
       
-      - name: Make destination directory for compiled CSS
-        run: mkdir -vp /tmp/LilyPichu/stuff
-      
-      - name: Compile CSS from SCSS files
-        uses: gha-utilities/sass-build@v0.6.0
+      - name: Set up Node
+        uses: actions/setup-node@v4
         with:
-          source: stuff/overlay.scss
-          destination: /tmp/LilyPichu/stuff/overlay.css
+          node-version: 22
 
+      # Same build as `npm run build`; the sass action only knew old Sass
       - name: Compile CSS from SCSS files
-        uses: gha-utilities/sass-build@v0.6.0
-        with:
-          source: lilypichu.scss
-          destination: /tmp/LilyPichu/main.css
+        run: |
+          npm install --no-package-lock
+          npm run build
+          mkdir -vp /tmp/LilyPichu/stuff
+          cp dist/overlay.css /tmp/LilyPichu/stuff/overlay.css
+          cp dist/main.css /tmp/LilyPichu/main.css
 
       - name: Checkout destination Git branch
         uses: actions/checkout@v2

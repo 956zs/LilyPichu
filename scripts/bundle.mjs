@@ -15,7 +15,8 @@ const bodies = [];
 let rest = src.slice(header.length).replace(/^\/\*[^*]*\*\/\n(?=@import)/gm, "");
 rest = rest.replace(/^@import url\("([^"]+)"\);\n?/gm, (_, url) => {
   const key = Object.keys(inline).find(k => url.endsWith(k));
-  if (key) bodies.push(readFileSync(inline[key], "utf8"));
+  // Markers let users delete a whole part, e.g. the decorations
+  if (key) bodies.push(`/* ---- begin ${inline[key]} ---- */\n${readFileSync(inline[key], "utf8")}/* ---- end ${inline[key]} ---- */`);
   else imports.push(`@import url("${url}");`);
   return "";
 });
