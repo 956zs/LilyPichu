@@ -19,7 +19,7 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 
 // Pink background behind everything
 #{s.$bg} {
-	background: var(--background-tertiary-alt, #ffc7d4);
+	background: var(--background-tertiary-alt, var(--lily-frame));
 }
 
 // Discord fades the base layer in and out (inline opacity) around full-screen
@@ -30,10 +30,19 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	z-index: 1;
 }
 
+// App notices ("How is ... working for you?") float as a rounded bar above
+// the card instead of a full-width strip
+#{s.$base} > #{s.c(notice)} {
+	margin: 8px 10px 0 8px;
+	border: none;
+	border-radius: $radius;
+	box-shadow: none;
+}
+
 // The title bar sits on the pink background, so it needs dark text
 #{s.$titleBar},
 #{s.$titleBar} :is(.theme-dark, .theme-light) {
-	$text: var(--title-bar-text, #8c4a5a);
+	$text: var(--title-bar-text, var(--lily-frame-text));
 	$hover: color-mix(in srgb, #{$text}, black 25%);
 	--text-default: #{$text};
 	--text-strong: #{$text};
@@ -47,6 +56,13 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	--interactive-text-active: #{$hover};
 	--border-subtle: color-mix(in srgb, #{$text} 35%, transparent);
 	color: #{$text};
+}
+
+// Discord pulls the server list up above the voice/stream/quest panels and
+// leaves the column behind them transparent; on the pink frame that showed
+// as a hole around the panels
+#{s.$sidebar} {
+	background: var(--lily-tertiary);
 }
 
 #{s.$guilds} {
@@ -129,6 +145,11 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	// Back/forward and the inbox stay above the corner decorations
 	#{s.$titleBar} {
 		z-index: 2;
+	}
+
+	// Notices end where the card ends, not over the popout
+	#{s.$base} > #{s.c(notice)} {
+		margin-right: $popout-space;
 	}
 
 	// Full-screen layers (server settings, ...) cover the decorations too
