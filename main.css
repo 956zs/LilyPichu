@@ -78,6 +78,10 @@
   --control-brand-foreground-new: var(--lily-accent-text);
   --brand-500: var(--lily-accent);
   --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+  --control-secondary-background-default: color-mix(in srgb, var(--lily-accent) 16%, var(--lily-secondary-alt));
+  --control-secondary-background-hover: color-mix(in srgb, var(--lily-accent) 26%, var(--lily-secondary-alt));
+  --control-secondary-background-active: color-mix(in srgb, var(--lily-accent) 32%, var(--lily-secondary-alt));
+  --control-secondary-border-default: color-mix(in srgb, var(--lily-accent) 24%, transparent);
   --switch-background-selected-default: var(--lily-accent);
   --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
   --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
@@ -172,6 +176,10 @@
   --control-brand-foreground-new: var(--lily-accent-text);
   --brand-500: var(--lily-accent);
   --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+  --control-secondary-background-default: color-mix(in srgb, var(--lily-accent) 16%, var(--lily-secondary-alt));
+  --control-secondary-background-hover: color-mix(in srgb, var(--lily-accent) 26%, var(--lily-secondary-alt));
+  --control-secondary-background-active: color-mix(in srgb, var(--lily-accent) 32%, var(--lily-secondary-alt));
+  --control-secondary-border-default: color-mix(in srgb, var(--lily-accent) 24%, transparent);
   --switch-background-selected-default: var(--lily-accent);
   --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
   --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
@@ -271,6 +279,10 @@
     --control-brand-foreground-new: var(--lily-accent-text);
     --brand-500: var(--lily-accent);
     --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+    --control-secondary-background-default: color-mix(in srgb, var(--lily-accent) 16%, var(--lily-secondary-alt));
+    --control-secondary-background-hover: color-mix(in srgb, var(--lily-accent) 26%, var(--lily-secondary-alt));
+    --control-secondary-background-active: color-mix(in srgb, var(--lily-accent) 32%, var(--lily-secondary-alt));
+    --control-secondary-border-default: color-mix(in srgb, var(--lily-accent) 24%, transparent);
     --switch-background-selected-default: var(--lily-accent);
     --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
     --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
@@ -369,6 +381,10 @@
     --control-brand-foreground-new: var(--lily-accent-text);
     --brand-500: var(--lily-accent);
     --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+    --control-secondary-background-default: color-mix(in srgb, var(--lily-accent) 16%, var(--lily-secondary-alt));
+    --control-secondary-background-hover: color-mix(in srgb, var(--lily-accent) 26%, var(--lily-secondary-alt));
+    --control-secondary-background-active: color-mix(in srgb, var(--lily-accent) 32%, var(--lily-secondary-alt));
+    --control-secondary-border-default: color-mix(in srgb, var(--lily-accent) 24%, transparent);
     --switch-background-selected-default: var(--lily-accent);
     --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
     --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
@@ -810,6 +826,67 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
 .user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) img,
 .user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) :is([class^=avatarStack_], [class*=" avatarStack_"]) {
   border-radius: var(--border-radius, 20px);
+}
+
+:is([class^=embedFull_], [class*=" embedFull_"]) {
+  border-width: 0;
+  border-radius: calc(var(--border-radius, 20px) * 0.7);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--lily-accent) 9%, transparent), transparent 55%), var(--lily-secondary);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 22%, transparent), 0 6px 16px -10px rgba(0, 0, 0, 0.6);
+  padding-inline-start: 10px;
+}
+
+:is([class^=embedFull_], [class*=" embedFull_"]):not([style*=border-left-color])::before {
+  border-inline-start-color: var(--lily-accent) !important;
+}
+
+:is([class^=embedFull_], [class*=" embedFull_"])::before {
+  content: "";
+  position: absolute;
+  inset-block: 10px;
+  inset-inline-start: 6px;
+  width: 0;
+  border-radius: 4px;
+  pointer-events: none;
+  border-inline-start: 4px solid;
+  border-inline-start-color: inherit;
+}
+
+:is([class^=embedFull_], [class*=" embedFull_"]) :is([class^=embedMedia_], [class*=" embedMedia_"]),
+:is([class^=embedFull_], [class*=" embedFull_"]) :is([class^=embedImage_], [class*=" embedImage_"]) img,
+:is([class^=embedFull_], [class*=" embedFull_"]) :is([class^=embedImage_], [class*=" embedImage_"]) video,
+:is([class^=embedFull_], [class*=" embedFull_"]) :is([class^=embedThumbnail_], [class*=" embedThumbnail_"]) img,
+:is([class^=embedFull_], [class*=" embedFull_"]) :is([class^=embedThumbnail_], [class*=" embedThumbnail_"]) video {
+  border-radius: calc(var(--border-radius, 20px) * 0.45);
+}
+
+[id^=message-accessories] :is(:is([class^=withAccentColor_], [class*=" withAccentColor_"])) {
+  border-width: 0;
+  border-radius: calc(var(--border-radius, 20px) * 0.7);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--lily-accent) 9%, transparent), transparent 55%), var(--lily-secondary);
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 22%, transparent), 0 6px 16px -10px rgba(0, 0, 0, 0.6);
+  padding-inline-start: 22px;
+}
+
+[id^=message-accessories] :is(:is([class^=withAccentColor_], [class*=" withAccentColor_"]))::before {
+  content: "";
+  position: absolute;
+  inset-block: 10px;
+  inset-inline-start: 6px;
+  width: 0;
+  border-radius: 4px;
+  pointer-events: none;
+  width: 4px;
+  height: auto;
+  top: 10px;
+  bottom: 10px;
+  background-color: var(--__accent-color);
+  box-shadow: 0 0 10px -1px var(--__accent-color);
+}
+
+[id^=message-accessories] :is(:is([class^=withAccentColor_], [class*=" withAccentColor_"])) img,
+[id^=message-accessories] :is(:is([class^=withAccentColor_], [class*=" withAccentColor_"])) video {
+  border-radius: calc(var(--border-radius, 20px) * 0.45);
 }
 
 :root {
