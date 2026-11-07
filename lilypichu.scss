@@ -568,6 +568,7 @@ $dock-panels-bottom: 126px;
 
 @include meta.load-css('embeds');
 @include meta.load-css('polish');
+@include meta.load-css('polish2');
 
 // Gradients and the background image come last so they win over the flat
 // surface colors above when switched on

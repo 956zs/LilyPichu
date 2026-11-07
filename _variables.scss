@@ -140,6 +140,10 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
 	--brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
 
+	// Code and quotes
+	--background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
+	--spine-default: var(--lily-accent);
+
 	// Keyboard focus rings (Discord's default is blue)
 	--focus-primary: var(--lily-accent);
 	--border-focus: var(--lily-accent);
