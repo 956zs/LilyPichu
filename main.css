@@ -614,6 +614,8 @@ main:is([class^=chatContent_], [class*=" chatContent_"]) {
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) .user-profile-sidebar {
     margin: 0;
     padding: 0;
+    width: 100%;
+    max-width: none;
     height: 100%;
     overflow: hidden;
     border-radius: var(--border-radius, 20px);
