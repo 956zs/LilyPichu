@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root.theme-dark,
 :root .theme-dark,
 :root.theme-darker,
@@ -451,6 +452,79 @@ main:is([class^=chatContent_], [class*=" chatContent_"]) {
   background: var(--lily-accent);
 }
 
+#channels :is([class^=link_], [class*=" link_"]),
+:is([class^=privateChannels_], [class*=" privateChannels_"]) :is([class^=dm_], [class*=" dm_"]) > :is([class^=interactive_], [class*=" interactive_"]) {
+  border-radius: 999px;
+}
+
+#channels :is([class^=modeSelected_], [class*=" modeSelected_"]) :is([class^=link_], [class*=" link_"]),
+:is([class^=privateChannels_], [class*=" privateChannels_"]) :is([class^=interactiveSelected_], [class*=" interactiveSelected_"]) {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--lily-accent) 34%, transparent), color-mix(in srgb, var(--lily-accent) 12%, transparent));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 40%, transparent), 0 2px 10px -4px var(--lily-accent);
+}
+
+#channels :is([class^=modeSelected_], [class*=" modeSelected_"]) :is([class^=link_], [class*=" link_"]) :is([class^=icon_], [class*=" icon_"]) {
+  color: var(--lily-accent-text);
+}
+#channels :is([class^=modeSelected_], [class*=" modeSelected_"]) :is([class^=link_], [class*=" link_"]) :is([class^=name_], [class*=" name_"]) {
+  color: var(--lily-text-strong);
+}
+
+#channels :is([class^=mainContent_], [class*=" mainContent_"]):has(> h3) {
+  display: flex;
+  align-items: center;
+}
+#channels :is([class^=mainContent_], [class*=" mainContent_"]):has(> h3)::before {
+  content: "✿";
+  display: block;
+  position: static;
+  margin-inline-end: 4px;
+  font-size: 12px;
+  color: var(--lily-accent);
+}
+#channels :is([class^=mainContent_], [class*=" mainContent_"]):has(> h3) > h3 {
+  min-width: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--lily-accent-text);
+}
+#channels :is([class^=mainContent_], [class*=" mainContent_"]):has(> h3)::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  margin-inline: 6px 2px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--lily-accent) 55%, transparent), transparent);
+}
+
+h3:is([class^=membersGroup_], [class*=" membersGroup_"]) {
+  padding-inline: 12px;
+}
+h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGroupHeader_], [class*=" membersGroupHeader_"]) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGroupHeader_], [class*=" membersGroupHeader_"])::before, h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGroupHeader_], [class*=" membersGroupHeader_"])::after {
+  content: "✦";
+  flex: 1;
+  font-size: 10px;
+  color: var(--lily-accent);
+  background-repeat: no-repeat;
+  background-size: calc(100% - 14px) 1px;
+}
+h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGroupHeader_], [class*=" membersGroupHeader_"])::before {
+  margin-inline-end: 6px;
+  text-align: end;
+  background-image: linear-gradient(90deg, transparent, color-mix(in srgb, var(--lily-accent) 70%, transparent));
+  background-position: left center;
+}
+h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGroupHeader_], [class*=" membersGroupHeader_"])::after {
+  margin-inline-start: 6px;
+  text-align: start;
+  background-image: linear-gradient(90deg, color-mix(in srgb, var(--lily-accent) 70%, transparent), transparent);
+  background-position: right center;
+}
+
 @media (max-width: 1349.98px), (max-height: 639.98px) {
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) {
     position: relative;
@@ -648,6 +722,46 @@ main:is([class^=chatContent_], [class*=" chatContent_"]) {
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) > :is([class^=container_], [class*=" container_"]):last-child > :is([class^=buttons_], [class*=" buttons_"]) {
     flex: 1 0 100%;
     justify-content: space-between;
+  }
+}
+@supports (anchor-name: --lily) {
+  @media (min-width: 1350px) and (min-height: 640px) {
+    #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) {
+      --custom-app-panels-height: 0px !important;
+    }
+    #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) {
+      position: fixed;
+      inset: auto var(--popout-right, 60px) 126px auto;
+      width: var(--popout-width, 320px);
+      box-sizing: border-box;
+      anchor-name: --lily-panels;
+      border-radius: var(--border-radius, 20px);
+      overflow: hidden;
+      background: var(--lily-secondary);
+    }
+    :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+    :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]) {
+      bottom: calc(anchor(--lily-panels top) + 45px);
+      min-height: 120px;
+    }
+    :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
+      bottom: calc(anchor(--lily-panels top) + 10px);
+    }
+    #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::before {
+      display: none;
+    }
+    #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::after {
+      content: var(--empty-popout-text, "Stay comfy");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--lily-text);
+      background: var(--jumping-gif) bottom/40% no-repeat, var(--lily-primary);
+      border-radius: var(--border-radius, 20px);
+      bottom: calc(anchor(--lily-panels top) + 10px);
+    }
   }
 }
 .user-profile-popout > :is([class^=inner_], [class*=" inner_"]) > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]),
