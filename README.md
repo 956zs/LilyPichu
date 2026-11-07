@@ -23,6 +23,8 @@ Ported to Discord's current layout and class names:
 - The right popout is back: member list, DM profile and "Active now" float in a card on the right, with "Stay comfy" and the jumping GIF when there is nothing to show (windows 1350px and wider).
 - The user area sits under the popout, and profile popouts get the faded banner and square avatar.
 - Selectors match the readable part of Discord's class names (`[class^="guilds_"]`), so the theme survives the hash changes Discord ships with every build. The old generated selector lists that made the theme lag are gone.
+- Narrow or short windows keep the frame, the rounded card and inset member list / DM profile cards instead of falling back to plain Discord.
+- Mentions, replies and jump highlights use the accent instead of Discord's yellow and blurple.
 - Colors use Discord's current tokens (`--background-base-*`, `--text-default`, ...) and are all mixed from one base color.
 
 The partials for the old layout are kept in `old/` for reference; they are not built.

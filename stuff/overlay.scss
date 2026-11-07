@@ -7,6 +7,29 @@
   pointer-events: none;
 }
 
+// Narrow windows: only the corner and the bottom strip, both behind the card
+@media (max-width: 1349.98px), (max-height: 639.98px) {
+  :root #{selectors.$appOuter}::before {
+    @include base;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: url("https://i.imgur.com/jTpFJuI.png") no-repeat;
+    background-size: 100%;
+  }
+  :root #{selectors.$appOuter}::after {
+    @include base;
+    z-index: 0;
+    left: 50px;
+    bottom: 0;
+    width: 490px;
+    height: 40px;
+    background: url("https://i.imgur.com/KQQWcTY.png") no-repeat;
+    background-size: 100%;
+  }
+}
+
 // Only with the right popout layout; on narrow windows they would cover the UI
 $popout-left: calc(var(--popout-right, 60px) + var(--popout-width, 320px));
 

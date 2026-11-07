@@ -50,7 +50,8 @@
   /* Border radius for the whole theme */
   --border-radius: 20px;
 
-  /* Main font; CJK text uses the system font for your language */
+  /* Main font; CJK text uses the system font for your language. Any font
+     works if you @import it, e.g. "Huninn" from Google Fonts */
   --lily-font: "Nunito";
 
   /* Nitro profile themes: lily recolors profiles with this theme,
