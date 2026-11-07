@@ -12,6 +12,13 @@
 </div>
 <br/>
 
+## 2.7
+
+- Code blocks are rounded dark cards, inline code is an accent chip, and quote bars use the accent with a soft glow.
+- Chat dividers fade at both ends with the date in a small pill; the "new messages" line and its NEW tag use the accent.
+- User and server settings sidebars: accent pill on the selected page, ✿ before section labels.
+- Voice user rows in the channel list are pills, and the speaking ring over text chats uses the accent.
+
 ## 2.6
 
 - Rounded message box with an accent glow while typing.
