@@ -12,6 +12,11 @@
 </div>
 <br/>
 
+## 2.5
+
+- Embeds and Components V2 containers are rounded cards with a soft accent tint; their side bar becomes a rounded pill that keeps each bot's own color.
+- Secondary buttons are tinted with the accent.
+
 ## 2.4
 
 - Gradients (`--gradients: on`, with shift, strength and angle), a background image with blur and dim, and `--decorations: off`.
