@@ -1,1 +1,648 @@
-@media(min-width: 1350px){.outer_c0bea0.panel_c0bea0,[class*=chatContent]+.container_c8ffbb,[class*=chatContent]+.membersWrap_c8ffbb,.container_c8ffbb:has(.membersWrap_c8ffbb),.nowPlayingColumn__133bf,:is(.layers__960e4,.layers__160d8)>:is(.layers__960e4,.layers__160d8,.layer__960e4,.layerContainer_da8173,.layer_da8173,.layer_bc663c)>:is(.container_c48ade,.container__2637a,.container_f37cb1,.container__6e9be,.container__7aaec,.containerPadding__7aaec,.containerDefault_c69b6d,.containerDefault__29444,.container_cc72c1,.container__5b40b,.container__37e49,.container__9293f,.container_b7e1cb,.container__040f0,.container__183c2,.container_c8ffbb,.container__91a9d,.erd_scroll_detection_container,.erd_scroll_detection_container_animation_active,.containerTop__45edc,.containerWithContent_b64375,.container__8061a,.container_c9ccf6,.container_afed89,.container__3b95d,.container_ac6cb0,.container_fea832,.container__55c99,.react-datepicker__month-container,.container_b15955,.container__4d95d,.container__133bf,.container_a45028,.container__7d20c,.container__8061a,.container_c2b141,.container__8279f,.container__0d850,.container__87bf1,.vc-addon-title-container,.container__754bd,.container__4f074,.container__00de6,.container__235ca,.container__02a39,.container__86c0f,.container_b50d96,.container__2d263,.container_fed6d3,.container__871cd,.container_d02962)::after,:is(.layers__960e4,.layers__160d8)>:is(.layers__960e4,.layers__160d8,.layer__960e4,.layerContainer_da8173,.layer_da8173,.layer_bc663c)>:is(.container_c48ade,.container__2637a,.container_f37cb1,.container__6e9be,.container__7aaec,.containerPadding__7aaec,.containerDefault_c69b6d,.containerDefault__29444,.container_cc72c1,.container__5b40b,.container__37e49,.container__9293f,.container_b7e1cb,.container__040f0,.container__183c2,.container_c8ffbb,.container__91a9d,.erd_scroll_detection_container,.erd_scroll_detection_container_animation_active,.containerTop__45edc,.containerWithContent_b64375,.container__8061a,.container_c9ccf6,.container_afed89,.container__3b95d,.container_ac6cb0,.container_fea832,.container__55c99,.react-datepicker__month-container,.container_b15955,.container__4d95d,.container__133bf,.container_a45028,.container__7d20c,.container__8061a,.container_c2b141,.container__8279f,.container__0d850,.container__87bf1,.vc-addon-title-container,.container__754bd,.container__4f074,.container__00de6,.container__235ca,.container__02a39,.container__86c0f,.container_b50d96,.container__2d263,.container_fed6d3,.container__871cd,.container_d02962)::before{position:fixed;top:220px;bottom:85px;right:60px;width:320px;min-width:320px;max-width:320px;height:unset}.outer_c0bea0.panel_c0bea0,.inner_c0bea0.panel_c0bea0,:is(.layers__960e4,.layers__160d8)>:is(.layers__960e4,.layers__160d8,.layer__960e4,.layerContainer_da8173,.layer_da8173,.layer_bc663c)>:is(.container_c48ade,.container__2637a,.container_f37cb1,.container__6e9be,.container__7aaec,.containerPadding__7aaec,.containerDefault_c69b6d,.containerDefault__29444,.container_cc72c1,.container__5b40b,.container__37e49,.container__9293f,.container_b7e1cb,.container__040f0,.container__183c2,.container_c8ffbb,.container__91a9d,.erd_scroll_detection_container,.erd_scroll_detection_container_animation_active,.containerTop__45edc,.containerWithContent_b64375,.container__8061a,.container_c9ccf6,.container_afed89,.container__3b95d,.container_ac6cb0,.container_fea832,.container__55c99,.react-datepicker__month-container,.container_b15955,.container__4d95d,.container__133bf,.container_a45028,.container__7d20c,.container__8061a,.container_c2b141,.container__8279f,.container__0d850,.container__87bf1,.vc-addon-title-container,.container__754bd,.container__4f074,.container__00de6,.container__235ca,.container__02a39,.container__86c0f,.container_b50d96,.container__2d263,.container_fed6d3,.container__871cd,.container_d02962)::after{border-radius:var(--border-radius)}.nowPlayingColumn__133bf,[class*=chatContent]+.container_c8ffbb,[class*=chatContent]+.membersWrap_c8ffbb,.container_c8ffbb:has(.membersWrap_c8ffbb){top:280px;bottom:120px}.nowPlayingColumn__133bf::before,.membersWrap_c8ffbb::before{content:"Member list";position:absolute;top:-60px;z-index:1;width:100%;height:60px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:bolder;color:var(--header-primary);background-color:var(--background-secondary);border-radius:var(--border-radius) var(--border-radius) 0 0}.nowPlayingColumn__133bf::after,.membersWrap_c8ffbb::after{content:"";position:absolute;bottom:-35px;z-index:1;width:100%;height:35px;background-color:var(--background-secondary);border-radius:0 0 var(--border-radius) var(--border-radius);background-image:linear-gradient(to right, var(--header-primary) 33%, rgba(255, 255, 255, 0) 0%);background-position:top;background-size:21px 2px;background-repeat:repeat-x}.nowPlayingColumn__133bf :is(.scroller_ef3116,.scrollerBase_d125d2,.scroller__629e4,.scrollerBase__99f8c,.scroller__36d07,.scrollerContent__36d07,.scrollerInner__36d07,.scrollerSpacer__36d07,.scroller_affa7e,.scroller_d2b491,.scroller_ac6cb0,.scroller__99e7c,.scroller__7d20c,.scroller_a9e706,.scroller_c1e9c4){border-left:none;margin-left:0}.nowPlayingColumn__133bf::before{content:"Member list"}:is(.membersWrap_c8ffbb,.members_c8ffbb,.membersGroup_c8ffbb){border-radius:var(--border-radius) 0 0}.tabBody__133bf{transform:none}:is(.layers__960e4,.layers__160d8)>:is(.layers__960e4,.layers__160d8,.layer__960e4,.layerContainer_da8173,.layer_da8173,.layer_bc663c):nth-child(2){margin-right:450px}:is(.layers__960e4,.layers__160d8)>:is(.layers__960e4,.layers__160d8,.layer__960e4,.layerContainer_da8173,.layer_da8173,.layer_bc663c)>:is(.container_c48ade,.container__2637a,.container_f37cb1,.container__6e9be,.container__7aaec,.containerPadding__7aaec,.containerDefault_c69b6d,.containerDefault__29444,.container_cc72c1,.container__5b40b,.container__37e49,.container__9293f,.container_b7e1cb,.container__040f0,.container__183c2,.container_c8ffbb,.container__91a9d,.erd_scroll_detection_container,.erd_scroll_detection_container_animation_active,.containerTop__45edc,.containerWithContent_b64375,.container__8061a,.container_c9ccf6,.container_afed89,.container__3b95d,.container_ac6cb0,.container_fea832,.container__55c99,.react-datepicker__month-container,.container_b15955,.container__4d95d,.container__133bf,.container_a45028,.container__7d20c,.container__8061a,.container_c2b141,.container__8279f,.container__0d850,.container__87bf1,.vc-addon-title-container,.container__754bd,.container__4f074,.container__00de6,.container__235ca,.container__02a39,.container__86c0f,.container_b50d96,.container__2d263,.container_fed6d3,.container__871cd,.container_d02962){margin-right:450px}:is(.layers__960e4,.layers__160d8)>:is(.layers__960e4,.layers__160d8,.layer__960e4,.layerContainer_da8173,.layer_da8173,.layer_bc663c)>:is(.container_c48ade,.container__2637a,.container_f37cb1,.container__6e9be,.container__7aaec,.containerPadding__7aaec,.containerDefault_c69b6d,.containerDefault__29444,.container_cc72c1,.container__5b40b,.container__37e49,.container__9293f,.container_b7e1cb,.container__040f0,.container__183c2,.container_c8ffbb,.container__91a9d,.erd_scroll_detection_container,.erd_scroll_detection_container_animation_active,.containerTop__45edc,.containerWithContent_b64375,.container__8061a,.container_c9ccf6,.container_afed89,.container__3b95d,.container_ac6cb0,.container_fea832,.container__55c99,.react-datepicker__month-container,.container_b15955,.container__4d95d,.container__133bf,.container_a45028,.container__7d20c,.container__8061a,.container_c2b141,.container__8279f,.container__0d850,.container__87bf1,.vc-addon-title-container,.container__754bd,.container__4f074,.container__00de6,.container__235ca,.container__02a39,.container__86c0f,.container_b50d96,.container__2d263,.container_fed6d3,.container__871cd,.container_d02962)::after{content:"Stay comfy";z-index:-2;background-color:var(--background-primary);text-align:center;display:flex;align-items:center;justify-content:center;font-size:30px;color:var(--text-normal);overflow:hidden}:is(.layers__960e4,.layers__160d8)>:is(.layers__960e4,.layers__160d8,.layer__960e4,.layerContainer_da8173,.layer_da8173,.layer_bc663c)>:is(.container_c48ade,.container__2637a,.container_f37cb1,.container__6e9be,.container__7aaec,.containerPadding__7aaec,.containerDefault_c69b6d,.containerDefault__29444,.container_cc72c1,.container__5b40b,.container__37e49,.container__9293f,.container_b7e1cb,.container__040f0,.container__183c2,.container_c8ffbb,.container__91a9d,.erd_scroll_detection_container,.erd_scroll_detection_container_animation_active,.containerTop__45edc,.containerWithContent_b64375,.container__8061a,.container_c9ccf6,.container_afed89,.container__3b95d,.container_ac6cb0,.container_fea832,.container__55c99,.react-datepicker__month-container,.container_b15955,.container__4d95d,.container__133bf,.container_a45028,.container__7d20c,.container__8061a,.container_c2b141,.container__8279f,.container__0d850,.container__87bf1,.vc-addon-title-container,.container__754bd,.container__4f074,.container__00de6,.container__235ca,.container__02a39,.container__86c0f,.container_b50d96,.container__2d263,.container_fed6d3,.container__871cd,.container_d02962)::before{content:"";right:70px;z-index:-1;width:300px;border-radius:var(--border-radius);background:var(--jumping-gif) bottom/40% no-repeat}.guilds_c48ade+:nth-child(2){margin-right:450px;border-radius:0 var(--border-radius) var(--border-radius) 0}.panels_c48ade>:last-child{position:fixed;display:flex;width:305px;height:50px;bottom:28px;right:60px;justify-content:space-between;background-color:var(--background-primary);border-radius:var(--border-radius)}.panels_c48ade>:last-child :is(.avatarWrapper__37e49,.avatarWrapperNormal_f89da9,.avatarWrapper_f89da9){border-radius:var(--border-radius)}.container_c48ade{overflow:visible}.membersWrap_c8ffbb>:is(.membersWrap_c8ffbb,.members_c8ffbb,.membersGroup_c8ffbb){width:100%;background-color:var(--background-primary)}.membersWrap_c8ffbb>:is(.membersWrap_c8ffbb,.members_c8ffbb,.membersGroup_c8ffbb)>:is(.contents__201d5,.content_c48ade,.content__99f8c,.content__65844,.public-DraftEditor-content,.content_f75fb0,.content_d125d2,.contents_fc8177,.content_fc8177,.content__908e2,.contents_c19a55,.content__91a9d,.contentNoImagesUserPopoutV2_c1d9fd,.content__2ef49,.contentDefault__71961,.content__71961,.contentUnread__71961,.content__20a53,.contentRegion__23e6b,.contentTransitionWrap__23e6b,.contentRegionScroller__23e6b,.contentRegionShownSidebar__23e6b,.contentColumn__23e6b,.contentColumnDefault__23e6b,.contentColumnWide__23e6b,.content__235ca,.contentWrapper__08434,.content_fed6d3){min-height:1000px;background-color:rgba(0,0,0,0)}.membersWrap_c8ffbb>:is(.membersWrap_c8ffbb,.members_c8ffbb,.membersGroup_c8ffbb) [role=list]>div:is(.membersWrap_c8ffbb,.members_c8ffbb,.vc-membercount-widget,.vc-membercount-member-list,.vc-membercount-online-dot,.vc-membercount-online,.vc-membercount-total-dot,.vc-membercount-total,.membersGroup_c8ffbb,.member__5d473,.member_c8ffbb,.memberInner__5d473,.memberSinceWrapper_c4eb81,.memberSince_c4eb81,.vc-membercount-tooltip){max-width:300px;border-radius:var(--border-radius);background-color:var(--background-primary)}}
+:root.theme-dark,
+:root .theme-dark,
+:root.theme-darker,
+:root .theme-darker,
+:root.theme-midnight,
+:root .theme-midnight {
+  --lily-primary: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 86%, black);
+  --lily-secondary: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 65%, black);
+  --lily-secondary-alt: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 53%, black);
+  --lily-tertiary: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 31%, black);
+  --lily-floating: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 30%, black);
+  --lily-accent: var(--accent-color, hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h calc(s * 1.85) 55%));
+  --lily-accent-text: color-mix(in srgb, var(--lily-accent), white 45%);
+  --lily-text: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 82%);
+  --lily-text-strong: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 92%);
+  --lily-text-muted: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #f0f0f0 68%);
+  --lily-text-subtle: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #d8d8d8 52%);
+  --lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
+  --lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
+  --lily-interactive-active: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 90%);
+  --lily-hover: #ffffff0d;
+  --lily-selected: #ffffff17;
+  --lily-active: #ffffff21;
+  --app-frame-background: var(--lily-tertiary);
+  --background-base-lowest: var(--lily-tertiary);
+  --background-base-lower: var(--lily-secondary-alt);
+  --background-base-low: var(--lily-secondary);
+  --background-surface-high: var(--lily-secondary);
+  --background-surface-higher: color-mix(in srgb, var(--lily-secondary), var(--lily-primary));
+  --background-surface-highest: var(--lily-primary);
+  --background-secondary-alt: var(--lily-secondary-alt);
+  --background-accent: var(--lily-accent);
+  --background-brand: var(--lily-accent);
+  --bg-surface-raised: var(--lily-secondary);
+  --chat-background: var(--lily-primary);
+  --chat-background-default: var(--lily-primary);
+  --home-background: var(--lily-primary);
+  --panel-bg: var(--lily-secondary);
+  --modal-background: var(--lily-secondary);
+  --modal-footer-background: var(--lily-secondary-alt);
+  --card-background-default: var(--lily-secondary-alt);
+  --embed-background: var(--lily-secondary);
+  --channeltextarea-background: var(--lily-secondary);
+  --user-profile-overlay-background: var(--lily-secondary-alt);
+  --text-default: var(--lily-text);
+  --text-strong: var(--lily-text-strong);
+  --text-muted: var(--lily-text-muted);
+  --text-subtle: var(--lily-text-subtle);
+  --chat-text-muted: var(--lily-text-muted);
+  --text-brand: var(--lily-accent-text);
+  --channels-default: var(--lily-text-muted);
+  --channel-icon: var(--lily-interactive);
+  --channel-text-area-placeholder: var(--lily-text-subtle);
+  --input-placeholder-text-default: var(--lily-text-subtle);
+  --input-text-default: var(--lily-text);
+  --interactive-text-default: var(--lily-interactive);
+  --interactive-text-hover: var(--lily-interactive-hover);
+  --interactive-text-active: var(--lily-interactive-active);
+  --interactive-icon-default: var(--lily-interactive);
+  --interactive-icon-hover: var(--lily-interactive-hover);
+  --interactive-icon-active: var(--lily-interactive-active);
+  --interactive-muted: var(--lily-text-subtle);
+  --interactive-background-hover: var(--lily-hover);
+  --interactive-background-selected: var(--lily-selected);
+  --interactive-background-active: var(--lily-active);
+  --icon-default: var(--lily-interactive);
+  --icon-strong: var(--lily-interactive-active);
+  --icon-muted: var(--lily-text-subtle);
+  --icon-subtle: var(--lily-text-muted);
+  --icon-brand: var(--lily-accent-text);
+  --control-primary-background-default: var(--lily-accent);
+  --control-primary-background-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+  --control-primary-background-active: color-mix(in srgb, var(--lily-accent), black 18%);
+  --control-brand-foreground: var(--lily-accent-text);
+  --control-brand-foreground-new: var(--lily-accent-text);
+  --brand-500: var(--lily-accent);
+  --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+  --switch-background-selected-default: var(--lily-accent);
+  --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+  --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
+  --message-mentioned-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 20%);
+  --message-mentioned-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 27%);
+  --message-highlight-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 14%);
+  --message-highlight-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 20%);
+  --mention-background: color-mix(in srgb, var(--lily-accent) 28%, transparent);
+  --mention-foreground: var(--lily-accent-text);
+  --brand-05a: color-mix(in srgb, var(--lily-accent) 5%, transparent);
+  --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+  --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+  --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+  --scrollbar-auto-thumb: var(--lily-tertiary);
+  --scrollbar-auto-track: var(--lily-secondary-alt);
+  --scrollbar-thin-thumb: var(--lily-tertiary);
+  --scrollbar-thin-track: transparent;
+}
+
+:root.theme-light,
+:root .theme-light {
+  --lily-primary: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 6%, white);
+  --lily-secondary: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 15%, white);
+  --lily-secondary-alt: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 30%, white);
+  --lily-tertiary: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 45%, white);
+  --lily-floating: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 12%, white);
+  --lily-accent: var(--accent-color, color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), black 25%));
+  --lily-accent-text: color-mix(in srgb, var(--lily-accent), black 15%);
+  --lily-text: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 75%);
+  --lily-text-strong: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
+  --lily-text-muted: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a4a4e 70%);
+  --lily-text-subtle: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #7a6a6e 55%);
+  --lily-interactive: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a3a42 65%);
+  --lily-interactive-hover: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 70%);
+  --lily-interactive-active: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
+  --lily-hover: #0000000a;
+  --lily-selected: #00000012;
+  --lily-active: #0000001c;
+  --app-frame-background: var(--lily-tertiary);
+  --background-base-lowest: var(--lily-tertiary);
+  --background-base-lower: var(--lily-secondary-alt);
+  --background-base-low: var(--lily-secondary);
+  --background-surface-high: var(--lily-secondary);
+  --background-surface-higher: color-mix(in srgb, var(--lily-secondary), var(--lily-primary));
+  --background-surface-highest: var(--lily-primary);
+  --background-secondary-alt: var(--lily-secondary-alt);
+  --background-accent: var(--lily-accent);
+  --background-brand: var(--lily-accent);
+  --bg-surface-raised: var(--lily-secondary);
+  --chat-background: var(--lily-primary);
+  --chat-background-default: var(--lily-primary);
+  --home-background: var(--lily-primary);
+  --panel-bg: var(--lily-secondary);
+  --modal-background: var(--lily-secondary);
+  --modal-footer-background: var(--lily-secondary-alt);
+  --card-background-default: var(--lily-secondary-alt);
+  --embed-background: var(--lily-secondary);
+  --channeltextarea-background: var(--lily-secondary);
+  --user-profile-overlay-background: var(--lily-secondary-alt);
+  --text-default: var(--lily-text);
+  --text-strong: var(--lily-text-strong);
+  --text-muted: var(--lily-text-muted);
+  --text-subtle: var(--lily-text-subtle);
+  --chat-text-muted: var(--lily-text-muted);
+  --text-brand: var(--lily-accent-text);
+  --channels-default: var(--lily-text-muted);
+  --channel-icon: var(--lily-interactive);
+  --channel-text-area-placeholder: var(--lily-text-subtle);
+  --input-placeholder-text-default: var(--lily-text-subtle);
+  --input-text-default: var(--lily-text);
+  --interactive-text-default: var(--lily-interactive);
+  --interactive-text-hover: var(--lily-interactive-hover);
+  --interactive-text-active: var(--lily-interactive-active);
+  --interactive-icon-default: var(--lily-interactive);
+  --interactive-icon-hover: var(--lily-interactive-hover);
+  --interactive-icon-active: var(--lily-interactive-active);
+  --interactive-muted: var(--lily-text-subtle);
+  --interactive-background-hover: var(--lily-hover);
+  --interactive-background-selected: var(--lily-selected);
+  --interactive-background-active: var(--lily-active);
+  --icon-default: var(--lily-interactive);
+  --icon-strong: var(--lily-interactive-active);
+  --icon-muted: var(--lily-text-subtle);
+  --icon-subtle: var(--lily-text-muted);
+  --icon-brand: var(--lily-accent-text);
+  --control-primary-background-default: var(--lily-accent);
+  --control-primary-background-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+  --control-primary-background-active: color-mix(in srgb, var(--lily-accent), black 18%);
+  --control-brand-foreground: var(--lily-accent-text);
+  --control-brand-foreground-new: var(--lily-accent-text);
+  --brand-500: var(--lily-accent);
+  --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+  --switch-background-selected-default: var(--lily-accent);
+  --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+  --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
+  --message-mentioned-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 20%);
+  --message-mentioned-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 27%);
+  --message-highlight-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 14%);
+  --message-highlight-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 20%);
+  --mention-background: color-mix(in srgb, var(--lily-accent) 28%, transparent);
+  --mention-foreground: var(--lily-accent-text);
+  --brand-05a: color-mix(in srgb, var(--lily-accent) 5%, transparent);
+  --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+  --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+  --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+  --scrollbar-auto-thumb: var(--lily-tertiary);
+  --scrollbar-auto-track: var(--lily-secondary-alt);
+  --scrollbar-thin-thumb: var(--lily-tertiary);
+  --scrollbar-thin-track: transparent;
+}
+
+:root {
+  --profile-themes: lily;
+}
+
+@container style(--profile-themes: lily) {
+  :root:is(.theme-dark, .theme-darker, .theme-midnight) .custom-user-profile-theme:is(.theme-dark, .theme-light),
+  :root:is(.theme-dark, .theme-darker, .theme-midnight) .custom-user-profile-theme .theme-light {
+    --lily-primary: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 86%, black);
+    --lily-secondary: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 65%, black);
+    --lily-secondary-alt: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 53%, black);
+    --lily-tertiary: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 31%, black);
+    --lily-floating: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)) 30%, black);
+    --lily-accent: var(--accent-color, hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h calc(s * 1.85) 55%));
+    --lily-accent-text: color-mix(in srgb, var(--lily-accent), white 45%);
+    --lily-text: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 82%);
+    --lily-text-strong: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 92%);
+    --lily-text-muted: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #f0f0f0 68%);
+    --lily-text-subtle: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #d8d8d8 52%);
+    --lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
+    --lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
+    --lily-interactive-active: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 90%);
+    --lily-hover: #ffffff0d;
+    --lily-selected: #ffffff17;
+    --lily-active: #ffffff21;
+    --app-frame-background: var(--lily-tertiary);
+    --background-base-lowest: var(--lily-tertiary);
+    --background-base-lower: var(--lily-secondary-alt);
+    --background-base-low: var(--lily-secondary);
+    --background-surface-high: var(--lily-secondary);
+    --background-surface-higher: color-mix(in srgb, var(--lily-secondary), var(--lily-primary));
+    --background-surface-highest: var(--lily-primary);
+    --background-secondary-alt: var(--lily-secondary-alt);
+    --background-accent: var(--lily-accent);
+    --background-brand: var(--lily-accent);
+    --bg-surface-raised: var(--lily-secondary);
+    --chat-background: var(--lily-primary);
+    --chat-background-default: var(--lily-primary);
+    --home-background: var(--lily-primary);
+    --panel-bg: var(--lily-secondary);
+    --modal-background: var(--lily-secondary);
+    --modal-footer-background: var(--lily-secondary-alt);
+    --card-background-default: var(--lily-secondary-alt);
+    --embed-background: var(--lily-secondary);
+    --channeltextarea-background: var(--lily-secondary);
+    --user-profile-overlay-background: var(--lily-secondary-alt);
+    --text-default: var(--lily-text);
+    --text-strong: var(--lily-text-strong);
+    --text-muted: var(--lily-text-muted);
+    --text-subtle: var(--lily-text-subtle);
+    --chat-text-muted: var(--lily-text-muted);
+    --text-brand: var(--lily-accent-text);
+    --channels-default: var(--lily-text-muted);
+    --channel-icon: var(--lily-interactive);
+    --channel-text-area-placeholder: var(--lily-text-subtle);
+    --input-placeholder-text-default: var(--lily-text-subtle);
+    --input-text-default: var(--lily-text);
+    --interactive-text-default: var(--lily-interactive);
+    --interactive-text-hover: var(--lily-interactive-hover);
+    --interactive-text-active: var(--lily-interactive-active);
+    --interactive-icon-default: var(--lily-interactive);
+    --interactive-icon-hover: var(--lily-interactive-hover);
+    --interactive-icon-active: var(--lily-interactive-active);
+    --interactive-muted: var(--lily-text-subtle);
+    --interactive-background-hover: var(--lily-hover);
+    --interactive-background-selected: var(--lily-selected);
+    --interactive-background-active: var(--lily-active);
+    --icon-default: var(--lily-interactive);
+    --icon-strong: var(--lily-interactive-active);
+    --icon-muted: var(--lily-text-subtle);
+    --icon-subtle: var(--lily-text-muted);
+    --icon-brand: var(--lily-accent-text);
+    --control-primary-background-default: var(--lily-accent);
+    --control-primary-background-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+    --control-primary-background-active: color-mix(in srgb, var(--lily-accent), black 18%);
+    --control-brand-foreground: var(--lily-accent-text);
+    --control-brand-foreground-new: var(--lily-accent-text);
+    --brand-500: var(--lily-accent);
+    --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+    --switch-background-selected-default: var(--lily-accent);
+    --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+    --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
+    --message-mentioned-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 20%);
+    --message-mentioned-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 27%);
+    --message-highlight-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 14%);
+    --message-highlight-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 20%);
+    --mention-background: color-mix(in srgb, var(--lily-accent) 28%, transparent);
+    --mention-foreground: var(--lily-accent-text);
+    --brand-05a: color-mix(in srgb, var(--lily-accent) 5%, transparent);
+    --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+    --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+    --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+    --scrollbar-auto-thumb: var(--lily-tertiary);
+    --scrollbar-auto-track: var(--lily-secondary-alt);
+    --scrollbar-thin-thumb: var(--lily-tertiary);
+    --scrollbar-thin-track: transparent;
+    --profile-gradient-primary-color: var(--lily-secondary) !important;
+    --profile-gradient-secondary-color: var(--lily-secondary-alt) !important;
+    --profile-gradient-overlay-color: var(--lily-primary) !important;
+    --profile-gradient-modal-background-color: var(--lily-secondary-alt) !important;
+    --profile-gradient-button-color: var(--lily-accent) !important;
+  }
+  :root.theme-light .custom-user-profile-theme:is(.theme-dark, .theme-light),
+  :root.theme-light .custom-user-profile-theme .theme-dark {
+    --lily-primary: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 6%, white);
+    --lily-secondary: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 15%, white);
+    --lily-secondary-alt: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 30%, white);
+    --lily-tertiary: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 45%, white);
+    --lily-floating: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)) 12%, white);
+    --lily-accent: var(--accent-color, color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), black 25%));
+    --lily-accent-text: color-mix(in srgb, var(--lily-accent), black 15%);
+    --lily-text: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 75%);
+    --lily-text-strong: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
+    --lily-text-muted: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a4a4e 70%);
+    --lily-text-subtle: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #7a6a6e 55%);
+    --lily-interactive: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a3a42 65%);
+    --lily-interactive-hover: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 70%);
+    --lily-interactive-active: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
+    --lily-hover: #0000000a;
+    --lily-selected: #00000012;
+    --lily-active: #0000001c;
+    --app-frame-background: var(--lily-tertiary);
+    --background-base-lowest: var(--lily-tertiary);
+    --background-base-lower: var(--lily-secondary-alt);
+    --background-base-low: var(--lily-secondary);
+    --background-surface-high: var(--lily-secondary);
+    --background-surface-higher: color-mix(in srgb, var(--lily-secondary), var(--lily-primary));
+    --background-surface-highest: var(--lily-primary);
+    --background-secondary-alt: var(--lily-secondary-alt);
+    --background-accent: var(--lily-accent);
+    --background-brand: var(--lily-accent);
+    --bg-surface-raised: var(--lily-secondary);
+    --chat-background: var(--lily-primary);
+    --chat-background-default: var(--lily-primary);
+    --home-background: var(--lily-primary);
+    --panel-bg: var(--lily-secondary);
+    --modal-background: var(--lily-secondary);
+    --modal-footer-background: var(--lily-secondary-alt);
+    --card-background-default: var(--lily-secondary-alt);
+    --embed-background: var(--lily-secondary);
+    --channeltextarea-background: var(--lily-secondary);
+    --user-profile-overlay-background: var(--lily-secondary-alt);
+    --text-default: var(--lily-text);
+    --text-strong: var(--lily-text-strong);
+    --text-muted: var(--lily-text-muted);
+    --text-subtle: var(--lily-text-subtle);
+    --chat-text-muted: var(--lily-text-muted);
+    --text-brand: var(--lily-accent-text);
+    --channels-default: var(--lily-text-muted);
+    --channel-icon: var(--lily-interactive);
+    --channel-text-area-placeholder: var(--lily-text-subtle);
+    --input-placeholder-text-default: var(--lily-text-subtle);
+    --input-text-default: var(--lily-text);
+    --interactive-text-default: var(--lily-interactive);
+    --interactive-text-hover: var(--lily-interactive-hover);
+    --interactive-text-active: var(--lily-interactive-active);
+    --interactive-icon-default: var(--lily-interactive);
+    --interactive-icon-hover: var(--lily-interactive-hover);
+    --interactive-icon-active: var(--lily-interactive-active);
+    --interactive-muted: var(--lily-text-subtle);
+    --interactive-background-hover: var(--lily-hover);
+    --interactive-background-selected: var(--lily-selected);
+    --interactive-background-active: var(--lily-active);
+    --icon-default: var(--lily-interactive);
+    --icon-strong: var(--lily-interactive-active);
+    --icon-muted: var(--lily-text-subtle);
+    --icon-subtle: var(--lily-text-muted);
+    --icon-brand: var(--lily-accent-text);
+    --control-primary-background-default: var(--lily-accent);
+    --control-primary-background-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+    --control-primary-background-active: color-mix(in srgb, var(--lily-accent), black 18%);
+    --control-brand-foreground: var(--lily-accent-text);
+    --control-brand-foreground-new: var(--lily-accent-text);
+    --brand-500: var(--lily-accent);
+    --brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+    --switch-background-selected-default: var(--lily-accent);
+    --switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
+    --lily-highlight: hsl(from var(--lily-accent) calc(h - 70) s l);
+    --message-mentioned-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 20%);
+    --message-mentioned-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-accent) 27%);
+    --message-highlight-background-default: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 14%);
+    --message-highlight-background-hover: color-mix(in oklab, var(--lily-primary), var(--lily-highlight) 20%);
+    --mention-background: color-mix(in srgb, var(--lily-accent) 28%, transparent);
+    --mention-foreground: var(--lily-accent-text);
+    --brand-05a: color-mix(in srgb, var(--lily-accent) 5%, transparent);
+    --brand-10a: color-mix(in srgb, var(--lily-accent) 10%, transparent);
+    --brand-15a: color-mix(in srgb, var(--lily-accent) 15%, transparent);
+    --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
+    --scrollbar-auto-thumb: var(--lily-tertiary);
+    --scrollbar-auto-track: var(--lily-secondary-alt);
+    --scrollbar-thin-thumb: var(--lily-tertiary);
+    --scrollbar-thin-track: transparent;
+    --profile-gradient-primary-color: var(--lily-secondary) !important;
+    --profile-gradient-secondary-color: var(--lily-secondary-alt) !important;
+    --profile-gradient-overlay-color: var(--lily-primary) !important;
+    --profile-gradient-modal-background-color: var(--lily-secondary-alt) !important;
+    --profile-gradient-button-color: var(--lily-accent) !important;
+  }
+}
+:root:root {
+  --font-primary: var(--lily-font, "Nunito"), "gg sans", sans-serif;
+  --font-display: var(--lily-font, "Nunito"), "gg sans", sans-serif;
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=bg_], [class*=" bg_"]) {
+  background: var(--background-tertiary-alt, #ffc7d4);
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]),
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]) :is(.theme-dark, .theme-light) {
+  --text-default: var(--title-bar-text, #8c4a5a);
+  --text-strong: var(--title-bar-text, #8c4a5a);
+  --icon-default: var(--title-bar-text, #8c4a5a);
+  --interactive-icon-default: var(--title-bar-text, #8c4a5a);
+  --interactive-icon-hover: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
+  --interactive-icon-active: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
+  --interactive-text-default: var(--title-bar-text, #8c4a5a);
+  --interactive-text-hover: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
+  --interactive-text-active: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
+  --border-subtle: color-mix(in srgb, var(--title-bar-text, #8c4a5a) 35%, transparent);
+  color: var(--title-bar-text, #8c4a5a);
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) {
+  background: var(--lily-tertiary);
+}
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) > :is([class^=tree_], [class*=" tree_"]) > :is([class^=scroller_], [class*=" scroller_"]) {
+  padding-top: 6px !important;
+}
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > :is([class^=sidebarList_], [class*=" sidebarList_"]) {
+  border: none;
+  background: var(--lily-secondary);
+}
+
+main:is([class^=chatContent_], [class*=" chatContent_"]) {
+  background: var(--lily-primary);
+}
+
+:is([class^=message_], [class*=" message_"]):is([class^=mentioned_], [class*=" mentioned_"])::before {
+  background: var(--lily-accent);
+}
+
+@media (max-width: 1349.98px), (max-height: 639.98px) {
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) {
+    position: relative;
+    z-index: 1;
+    margin: 10px 10px 10px 0;
+    border-radius: 0 var(--border-radius, 20px) var(--border-radius, 20px) 0;
+    overflow: hidden;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]) {
+    z-index: 2;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
+    margin: 8px 8px 8px 0;
+    border-radius: var(--border-radius, 20px);
+    overflow: hidden;
+    background-color: var(--lily-secondary);
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]),
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) {
+    background-color: transparent;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) [role=listitem] {
+    border-radius: var(--border-radius, 20px);
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) {
+    border: none;
+    border-radius: var(--border-radius, 20px);
+  }
+}
+@media (min-width: 1350px) and (min-height: 640px) {
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) {
+    position: relative;
+    z-index: 1;
+    margin: 16px calc(var(--popout-width, 320px) + var(--popout-right, 60px) + 70px) 24px 0;
+    border-radius: 0 var(--border-radius, 20px) var(--border-radius, 20px) 0;
+    overflow: hidden;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]) {
+    z-index: 2;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=layer_], [class*=" layer_"]):not(:is([class^=baseLayer_], [class*=" baseLayer_"])) {
+    z-index: 3;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) {
+    mask: none;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"])::after {
+    display: none;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > :is([class^=sidebarList_], [class*=" sidebarList_"]) {
+    border-radius: 0;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]),
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar),
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::before,
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::after {
+    position: fixed;
+    top: 220px;
+    bottom: 128px;
+    right: var(--popout-right, 60px);
+    width: var(--popout-width, 320px);
+    min-width: var(--popout-width, 320px);
+    max-width: var(--popout-width, 320px);
+    height: auto;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::before {
+    content: var(--empty-popout-text, "Stay comfy");
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--lily-text);
+    background-color: var(--lily-primary);
+    border-radius: var(--border-radius, 20px);
+    pointer-events: none;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::after {
+    content: "";
+    z-index: 0;
+    background: var(--jumping-gif) bottom/40% no-repeat;
+    pointer-events: none;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]),
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
+    z-index: 3;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])),
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]) {
+    top: 280px;
+    bottom: 163px;
+    overflow: visible;
+    background-color: var(--lily-primary);
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"]))::before,
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"])::before {
+    content: var(--member-list-title, "Member list");
+    position: absolute;
+    top: -60px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--lily-text-strong);
+    background-color: var(--lily-secondary);
+    border-radius: var(--border-radius, 20px) var(--border-radius, 20px) 0 0;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"]))::after,
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"])::after {
+    content: "";
+    position: absolute;
+    bottom: -35px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 35px;
+    background-color: var(--lily-secondary);
+    border-radius: 0 0 var(--border-radius, 20px) var(--border-radius, 20px);
+    background-image: linear-gradient(to right, var(--lily-text) 33%, transparent 0%);
+    background-position: top;
+    background-size: 21px 2px;
+    background-repeat: repeat-x;
+  }
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"])::before {
+    content: var(--activity-title, "Active now");
+  }
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]) > aside > :is([class^=scroller_], [class*=" scroller_"]) > :is([class^=content_], [class*=" content_"]) > h2:first-child {
+    display: none;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]),
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) {
+    width: 100%;
+    min-width: 0;
+    height: 100%;
+    background-color: transparent;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) {
+    --custom-member-list-width: var(--popout-width, 320px);
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) [role=listitem] {
+    border-radius: var(--border-radius, 20px);
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
+    padding: 0;
+    overflow: hidden;
+    border-radius: var(--border-radius, 20px);
+    background: transparent;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) .user-profile-sidebar {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius, 20px);
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) .user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) {
+    border-radius: var(--border-radius, 20px);
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) {
+    border: none;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) > :is([class^=container_], [class*=" container_"]):last-child {
+    position: fixed;
+    right: var(--popout-right, 60px);
+    bottom: 24px;
+    width: var(--popout-width, 320px);
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    height: auto;
+    row-gap: 2px;
+    padding-block: 6px;
+    overflow: hidden;
+    border-radius: var(--border-radius, 20px);
+    background-color: var(--lily-primary);
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) > :is([class^=container_], [class*=" container_"]):last-child > :is([class^=accountPopoutButtonWrapper_], [class*=" accountPopoutButtonWrapper_"]) {
+    flex: 1 0 100%;
+    min-width: 0;
+    margin: 0;
+  }
+  #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) > :is([class^=container_], [class*=" container_"]):last-child > :is([class^=buttons_], [class*=" buttons_"]) {
+    flex: 1 0 100%;
+    justify-content: space-between;
+  }
+}
+.user-profile-popout > :is([class^=inner_], [class*=" inner_"]) > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]),
+.user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]) {
+  height: 300px !important;
+  margin-bottom: -195px;
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent);
+  mask-image: linear-gradient(to bottom, #000, transparent);
+  pointer-events: none;
+}
+.user-profile-popout > :is([class^=inner_], [class*=" inner_"]) > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]) > *,
+.user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]) > * {
+  height: 100%;
+  -webkit-mask: none;
+  mask: none;
+}
+.user-profile-popout > :is([class^=inner_], [class*=" inner_"]) > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) svg > foreignObject,
+.user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) svg > foreignObject {
+  mask: none;
+}
+.user-profile-popout > :is([class^=inner_], [class*=" inner_"]) > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) img,
+.user-profile-popout > :is([class^=inner_], [class*=" inner_"]) > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) :is([class^=avatarStack_], [class*=" avatarStack_"]),
+.user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) img,
+.user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=avatar_], [class*=" avatar_"]) :is([class^=avatarStack_], [class*=" avatarStack_"]) {
+  border-radius: var(--border-radius, 20px);
+}
