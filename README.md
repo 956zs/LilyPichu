@@ -12,6 +12,10 @@
 </div>
 <br/>
 
+## 2.3
+
+- `--home-icon`: any image for the Home (Direct Messages) button, keeping its rounded shape and the unread badge cutout. Unset, Discord's icon or your Nitro app icon shows.
+
 ## 2.2
 
 - Right "control center": voice, stream and quest panels move to the right above the account bar, and the member list / DM profile end right above them at any height (CSS anchor positioning; older clients keep the 2.1 layout). The server and channel lists run to the bottom.
@@ -94,6 +98,7 @@ All of them live in the `:root` block of `lilypichu.theme.css`.
 | `--popout-width` / `--popout-right` | `320px` / `60px` | Popout size and distance from the window edge |
 | `--border-radius` | `20px` | Corner radius |
 | `--lily-font` | `"Nunito"` | Main font |
+| `--home-icon` | unset | Image for the Home button, e.g. `url("https://...")` |
 | `--profile-themes` | `lily` | `lily` recolors Nitro profile themes (popouts, DM profile, profile modal); `keep` shows each user's colors |
 
 Remove the `overlay.css` import to hide the flowers and corner decorations. In the bundled `dist/lilypichu.theme.css`, delete everything between the `begin dist/overlay.css` and `end dist/overlay.css` comments instead.
