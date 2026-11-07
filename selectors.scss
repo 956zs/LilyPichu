@@ -27,8 +27,16 @@ $page: '#{$content} > #{c(page)}';
 $chatContent: 'main#{c(chatContent)}';
 
 // Right popout candidates
-$memberList: '#{$chatContent} + #{c(container)}';
+// Text channels put the member list after main.chatContent_, forums after
+// their own container_, so match on the shared parent
+$chatBody: '#{c(chat)} > #{c(content)}';
+$memberList: '#{$chatBody} > #{c(container)}:has(> aside#{c(membersWrap)})';
 $membersWrap: '#{$memberList} > aside#{c(membersWrap)}';
 $members: '#{$membersWrap} > #{c(members)}';
-$profileSidebar: '#{$chatContent} + aside:has(> .user-profile-sidebar)';
+$profileSidebar: '#{$chatBody} > aside:has(> .user-profile-sidebar)';
 $nowPlaying: '#{c(tabBody)} > #{c(nowPlayingColumn)}';
+$accountBar: '#{$panels} > #{c(container)}:last-child';
+
+// Profile cards: the banner and avatar sit in the card's own header
+$popoutHeader: '.user-profile-popout > #{c(inner)} > #{c(header)}';
+$sidebarHeader: '.user-profile-sidebar > #{c(inner)} > * > #{c(header)}';

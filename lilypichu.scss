@@ -9,9 +9,12 @@ $popout-width: var(--popout-width, 320px);
 // Room the main window leaves for the right popout.
 $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 
-#app-mount {
-	--font-primary: var(--lily-font, "Nunito"), "gg sans", "Noto Sans", "Noto Sans CJK TC", sans-serif;
-	--font-display: var(--lily-font, "Nunito"), "gg sans", "Noto Sans", "Noto Sans CJK TC", sans-serif;
+// Discord sets the font stacks on :root and :root:lang(...); popouts and
+// modals render outside #app-mount. CJK falls back to the system font for
+// the page language.
+:root:root {
+	--font-primary: var(--lily-font, "Nunito"), "gg sans", sans-serif;
+	--font-display: var(--lily-font, "Nunito"), "gg sans", sans-serif;
 }
 
 // Pink background behind everything
@@ -20,13 +23,22 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 }
 
 // The title bar sits on the pink background, so it needs dark text
-#{s.$titleBar} {
-	--text-default: var(--title-bar-text, #8c4a5a);
-	--text-strong: var(--title-bar-text, #8c4a5a);
-	--interactive-icon-default: var(--title-bar-text, #8c4a5a);
-	--interactive-icon-hover: color-mix(in srgb, var(--title-bar-text, #8c4a5a), black 25%);
-	--icon-default: var(--title-bar-text, #8c4a5a);
-	color: var(--title-bar-text, #8c4a5a);
+#{s.$titleBar},
+#{s.$titleBar} :is(.theme-dark, .theme-light) {
+	$text: var(--title-bar-text, #8c4a5a);
+	$hover: color-mix(in srgb, #{$text}, black 25%);
+	--text-default: #{$text};
+	--text-strong: #{$text};
+	--icon-default: #{$text};
+	--interactive-icon-default: #{$text};
+	--interactive-icon-hover: #{$hover};
+	--interactive-icon-active: #{$hover};
+	// window buttons on the desktop app
+	--interactive-text-default: #{$text};
+	--interactive-text-hover: #{$hover};
+	--interactive-text-active: #{$hover};
+	--border-subtle: color-mix(in srgb, #{$text} 35%, transparent);
+	color: #{$text};
 }
 
 #{s.$guilds} {
@@ -44,21 +56,35 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 
 // Right popout: member list, DM profile and friends activity float in a card
 // on the right; "Stay comfy" and the jumping GIF fill it when there is nothing.
-@media (min-width: 1350px) {
+@media (min-width: 1350px) and (min-height: 640px) {
 	// Main window leaves space for the popout. z-index keeps the corner
 	// decorations behind it and the popouts above the empty state.
 	#{s.$content} {
 		position: relative;
 		z-index: 1;
-		margin-right: $popout-space;
-		margin-bottom: 24px;
+		margin: 16px $popout-space 24px 0;
 		border-radius: 0 $radius $radius 0;
 		overflow: hidden;
 	}
 
-	// Discord keeps space for the user area under the server list
+	// Back/forward and the inbox stay above the corner decorations
+	#{s.$titleBar} {
+		z-index: 2;
+	}
+
+	// Full-screen layers (server settings, ...) cover the decorations too
+	#{s.$layers} > #{s.c(layer)}:not(#{s.c(baseLayer)}) {
+		z-index: 3;
+	}
+
+	// The server list now runs to the bottom of the window: drop the fade
+	// Discord hides under the user area, and the strip under both lists
 	#{s.$guilds} {
-		margin-bottom: 0;
+		mask: none;
+	}
+
+	#{s.$sidebar}::after {
+		display: none;
 	}
 
 	#{s.$sidebarList} {
@@ -72,7 +98,7 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	#{s.$base}::after {
 		position: fixed;
 		top: 220px;
-		bottom: 96px;
+		bottom: 128px;
 		right: $popout-right;
 		width: $popout-width;
 		min-width: $popout-width;
@@ -111,7 +137,7 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	#{s.$memberList},
 	#{s.$nowPlaying} {
 		top: 280px;
-		bottom: 131px;
+		bottom: 163px;
 		overflow: visible;
 		background-color: var(--lily-primary);
 
@@ -158,7 +184,7 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		}
 
 		// Replaced by the header above
-		h2:first-child {
+		> aside > #{s.c(scroller)} > #{s.c(content)} > h2:first-child {
 			display: none;
 		}
 	}
@@ -172,6 +198,7 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	}
 
 	#{s.$members} [role="listitem"] {
+		max-width: none;
 		border-radius: $radius;
 	}
 
@@ -194,24 +221,47 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		}
 	}
 
-	// User area moves under the popout
+	// Only the account bar moves under the popout, like the original theme;
+	// voice, stream and quest panels stay at the bottom left. Discord measures
+	// the panels for --custom-app-panels-height, so the lists follow.
 	#{s.$panels} {
-		position: fixed;
-		left: auto;
-		right: $popout-right;
-		bottom: 24px;
-		width: $popout-width;
 		border: none;
-		border-radius: $radius;
-		background-color: var(--lily-primary);
+
+		// Name on the first row, buttons on the second, so the extra
+		// buttons client mods add still leave room for the name
+		@at-root #{s.$accountBar} {
+			position: fixed;
+			right: $popout-right;
+			bottom: 24px;
+			width: $popout-width;
+			box-sizing: border-box;
+			flex-wrap: wrap;
+			height: auto;
+			row-gap: 2px;
+			padding-block: 6px;
+			overflow: hidden;
+			border-radius: $radius;
+			background-color: var(--lily-primary);
+
+			> #{s.c(accountPopoutButtonWrapper)} {
+				flex: 1 0 100%;
+				min-width: 0;
+				margin: 0;
+			}
+
+			> #{s.c(buttons)} {
+				flex: 1 0 100%;
+				justify-content: space-between;
+			}
+		}
 	}
 }
 
 // Profile popouts and the DM profile: the banner stretches down and fades
 // into the card, the avatar becomes a rounded square
-.user-profile-popout,
-.user-profile-sidebar {
-	#{s.c(header)} > #{s.c(banner)} {
+#{s.$popoutHeader},
+#{s.$sidebarHeader} {
+	> #{s.c(banner)} {
 		// Discord sets the height inline
 		height: 300px !important;
 		margin-bottom: -195px;
@@ -227,7 +277,7 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		}
 	}
 
-	#{s.c(header)} > #{s.c(avatar)} {
+	> #{s.c(avatar)} {
 		svg > foreignObject {
 			mask: none;
 		}

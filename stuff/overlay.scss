@@ -8,7 +8,9 @@
 }
 
 // Only with the right popout layout; on narrow windows they would cover the UI
-@media (min-width: 1350px) {
+$popout-left: calc(var(--popout-right, 60px) + var(--popout-width, 320px));
+
+@media (min-width: 1350px) and (min-height: 640px) {
   :root #{selectors.$appOuter}::before {
     @include base;
     left: 0;
@@ -31,7 +33,7 @@
   :root #{selectors.$appInner}::before {
     @include base;
     top: 80px;
-    right: 116px;
+    right: calc(var(--popout-right, 60px) + 56px);
     width: 200px;
     height: 120px;
     background: url("https://i.imgur.com/0nsnP69.png") no-repeat;
@@ -39,7 +41,8 @@
   }
   :root #{selectors.$appInner}::after {
     @include base;
-    bottom: 20px;
+    // on the window's bottom edge, clear of the chat bar buttons
+    bottom: 2px;
     right: 45%;
     width: 40px;
     height: 40px;
@@ -69,7 +72,7 @@
   :root #{selectors.$bg}::after {
     @include base;
     top: 45px;
-    right: 385px;
+    right: calc(#{$popout-left} + 5px);
     width: 30px;
     height: 30px;
     background: url("https://i.imgur.com/aOYvahh.png") no-repeat;
@@ -79,7 +82,7 @@
     @include base;
     z-index: 2;
     bottom: 30%;
-    right: 430px;
+    right: calc(#{$popout-left} + 50px);
     width: 30px;
     height: 40px;
     background: url("https://i.imgur.com/JMoXBIs.png") no-repeat;
