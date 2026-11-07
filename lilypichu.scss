@@ -43,6 +43,13 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 
 #{s.$guilds} {
 	background: var(--lily-tertiary);
+
+	// The card's top edge sits right above the DM button; Discord relied on
+	// the title bar for that gap. 6px centers it on the server header.
+	// The scroller's padding is set inline.
+	> #{s.c(tree)} > #{s.c(scroller)} {
+		padding-top: 6px !important;
+	}
 }
 
 #{s.$sidebarList} {
