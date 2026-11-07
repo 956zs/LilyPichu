@@ -37,6 +37,11 @@ $profileSidebar: '#{$chatBody} > aside:has(> .user-profile-sidebar)';
 $nowPlaying: '#{c(tabBody)} > #{c(nowPlayingColumn)}';
 $accountBar: '#{$panels} > #{c(container)}:last-child';
 
+// Channel list, DM list and member list groups
+$channels: '#channels';
+$privateChannels: '#{c(privateChannels)}';
+$membersGroup: 'h3#{c(membersGroup)}';
+
 // Messages
 $message: '#{c(message)}';
 $mentioned: '#{c(mentioned)}';
