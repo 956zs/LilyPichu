@@ -1,3 +1,4 @@
+@use 'sass:meta';
 @use 'selectors' as s;
 @use 'variables';
 
@@ -15,11 +16,6 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 :root:root {
 	--font-primary: var(--lily-font, "Nunito"), "gg sans", sans-serif;
 	--font-display: var(--lily-font, "Nunito"), "gg sans", sans-serif;
-}
-
-// Pink background behind everything
-#{s.$bg} {
-	background: var(--background-tertiary-alt, var(--lily-frame));
 }
 
 // Discord fades the base layer in and out (inline opacity) around full-screen
@@ -542,3 +538,7 @@ $dock-panels-bottom: 126px;
 		}
 	}
 }
+
+// Gradients and the background image come last so they win over the flat
+// surface colors above when switched on
+@include meta.load-css('effects');

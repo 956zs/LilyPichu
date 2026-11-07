@@ -1,0 +1,90 @@
+@use 'selectors' as s;
+
+// Optional effects, all driven by variables so the settings plugin (or the
+// theme file) can switch them:
+//   --gradients: on             surfaces fade from their color to a hue-shifted copy
+//   --gradient-angle / --gradient-shift / --gradient-strength
+//   --background-image          image over the frame, with --background-blur
+//                               and --background-dim
+//   --decorations: off          lives in stuff/overlay.scss
+
+$radius: var(--border-radius, 20px);
+
+// The far end of a gradient: the color turned around the hue wheel
+@function shifted($c, $strength: 'var(--gradient-strength, 60%)') {
+	@return 'color-mix(in oklab, #{$c}, hsl(from #{$c} calc(h + var(--gradient-shift, -45)) s l) #{$strength})';
+}
+
+@function grad($c, $angle: 'var(--gradient-angle, 160deg)', $strength: 'var(--gradient-strength, 60%)') {
+	@return 'linear-gradient(#{$angle}, #{$c}, #{shifted($c, $strength)})';
+}
+
+:root {
+	--gradients: off;
+	--background-image: none;
+	--decorations: on;
+}
+
+// App background. The frame color (or gradient) and the optional image are
+// painted on the app element under Discord's bg layer, which stays
+// transparent; that way the blur below never reaches the decorations drawn
+// on bg's own pseudo-elements.
+#{s.$appInner} {
+	background:
+		var(--background-image) center / cover no-repeat,
+		var(--background-tertiary-alt, var(--lily-frame));
+}
+
+#{s.$bg} {
+	background: transparent;
+}
+
+// Only with an image: dim and blur it. backdrop-filter makes bg a stacking
+// context, so it stays off when there is nothing to blur.
+@container not style(--background-image: none) {
+	#{s.$bg} {
+		background: color-mix(in srgb, black var(--background-dim, 0%), transparent);
+		backdrop-filter: blur(var(--background-blur, 0px));
+	}
+}
+
+@container style(--gradients: on) {
+	#{s.$appInner} {
+		background:
+			var(--background-image) center / cover no-repeat,
+			var(--background-tertiary-alt, #{grad('var(--lily-frame)', '135deg', '70%')});
+	}
+
+	// Discord's own gradient slots, used by many smaller surfaces
+	#app-mount {
+		--background-gradient-app-frame: #{grad('var(--lily-tertiary)', '180deg')};
+		--background-gradient-lowest: #{grad('var(--lily-tertiary)')};
+		--background-gradient-lower: #{grad('var(--lily-secondary-alt)')};
+		--background-gradient-low: #{grad('var(--lily-secondary)')};
+		--background-gradient-high: #{grad('var(--lily-secondary)', '180deg')};
+		--background-gradient-higher: #{grad('color-mix(in srgb, var(--lily-secondary), var(--lily-primary))')};
+		--background-gradient-highest: #{grad('var(--lily-primary)')};
+		--background-gradient-chat: #{grad('var(--lily-primary)', '180deg', 'calc(var(--gradient-strength, 60%) / 2)')};
+	}
+
+	#{s.$sidebar},
+	#{s.$guilds} {
+		background: #{grad('var(--lily-tertiary)', '180deg')};
+	}
+
+	#{s.$sidebarList} {
+		background: #{grad('var(--lily-secondary)', '180deg')};
+	}
+
+	// The chat gets half the strength so long reads stay calm
+	#{s.$chatContent} {
+		background: #{grad('var(--lily-primary)', 'var(--gradient-angle, 160deg)', 'calc(var(--gradient-strength, 60%) / 2)')};
+	}
+
+	#{s.$memberList},
+	#{s.$nowPlaying},
+	#{s.$panels},
+	#{s.$accountBar} {
+		background: #{grad('var(--lily-primary)', '180deg')};
+	}
+}

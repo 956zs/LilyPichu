@@ -114,3 +114,17 @@ $popout-left: calc(var(--popout-right, 60px) + var(--popout-width, 320px));
     background-size: 100%;
   }
 }
+
+// --decorations: off hides them all
+@container style(--decorations: off) {
+  :root #{selectors.$appOuter}::before,
+  :root #{selectors.$appOuter}::after,
+  :root #{selectors.$appInner}::before,
+  :root #{selectors.$appInner}::after,
+  :root #{selectors.$layers}::before,
+  :root #{selectors.$layers}::after,
+  :root #{selectors.$bg}::before,
+  :root #{selectors.$bg}::after {
+    display: none;
+  }
+}
