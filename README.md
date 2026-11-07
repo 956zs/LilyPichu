@@ -12,6 +12,11 @@
 </div>
 <br/>
 
+## 2.2
+
+- Right "control center": voice, stream and quest panels move to the right above the account bar, and the member list / DM profile end right above them at any height (CSS anchor positioning; older clients keep the 2.1 layout). The server and channel lists run to the bottom.
+- The selected channel or DM is an accent pill, categories get a ✿ and a fading line, and member list groups are centered between ✦ lines.
+
 ## 2.1
 
 - The pink frame and the title bar text follow the base color, and `--decoration-filter` recolors the corner decorations, so every preset looks consistent.
