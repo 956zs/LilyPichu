@@ -218,6 +218,19 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		background-color: var(--lily-secondary);
 	}
 
+	// Profile frames reach past the card: keep it clear of the main card's
+	// rounded edge, which clips
+	// Discord fixes its height to the chat's, so margins pushed it past the
+	// card; auto lets the flex row subtract them
+	#{s.$profileSidebar} {
+		height: auto;
+		overflow: visible;
+
+		&:has(> .custom-profile-frame) {
+			margin: 56px 18px 52px 10px;
+		}
+	}
+
 	#{s.$membersWrap},
 	#{s.$members} {
 		background-color: transparent;
@@ -391,9 +404,12 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		border-radius: $radius;
 	}
 
+	// Nothing in the profile card clips: Nitro profile frames are drawn past
+	// its edges (about 15px on the sides, 50px above and below). Backgrounds
+	// still follow the radius; the banner rounds its own top corners.
 	#{s.$profileSidebar} {
 		padding: 0;
-		overflow: hidden;
+		overflow: visible;
 		border-radius: $radius;
 		background: transparent;
 
@@ -405,10 +421,11 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 			width: 100%;
 			max-width: none;
 			height: 100%;
-			overflow: hidden;
+			overflow: visible;
 			border-radius: $radius;
 
 			> #{s.c(inner)} {
+				overflow: visible;
 				border-radius: $radius;
 			}
 		}
@@ -484,6 +501,11 @@ $dock-panels-bottom: 126px;
 
 		#{s.$profileSidebar} {
 			bottom: calc(anchor(--lily-panels top) + 10px);
+
+			// Nitro profile frames hang about 50px below the card
+			&:has(> .custom-profile-frame) {
+				bottom: calc(anchor(--lily-panels top) + 50px);
+			}
 		}
 
 		// ::before comes before the panels in tree order and cannot anchor to
@@ -509,6 +531,11 @@ $dock-panels-bottom: 126px;
 
 // Profile popouts and the DM profile: the banner stretches down and fades
 // into the card, the avatar becomes a rounded square
+#{s.$sidebarHeader} > #{s.c(banner)} {
+	border-radius: $radius $radius 0 0;
+	overflow: hidden;
+}
+
 #{s.$popoutHeader},
 #{s.$sidebarHeader} {
 	> #{s.c(banner)} {
