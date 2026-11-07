@@ -1,0 +1,79 @@
+@use 'selectors' as s;
+
+// Link/bot embeds and Components V2 containers: rounded cards with a soft
+// accent tint, and the colored side bar becomes a rounded pill inset from
+// the edge.
+//
+// Embeds get their color from an inline border-left-color (none means the
+// default); the pill is a ::before that inherits that border color, so every
+// bot keeps its own color. Containers pass theirs as --__accent-color.
+
+$card-radius: calc(var(--border-radius, 20px) * 0.7);
+$inner-radius: calc(var(--border-radius, 20px) * 0.45);
+
+// The outline is an inset shadow: the border stays at width 0 so its color
+// can still carry the embed color to the pill without drawing a curved line
+@mixin card {
+	border-width: 0;
+	border-radius: $card-radius;
+	background:
+		linear-gradient(135deg, color-mix(in srgb, var(--lily-accent) 9%, transparent), transparent 55%),
+		var(--lily-secondary);
+	box-shadow:
+		inset 0 0 0 1px color-mix(in srgb, var(--lily-accent) 22%, transparent),
+		0 6px 16px -10px rgb(0 0 0 / 0.6);
+}
+
+@mixin pill {
+	content: "";
+	position: absolute;
+	inset-block: 10px;
+	inset-inline-start: 6px;
+	width: 0;
+	border-radius: 4px;
+	pointer-events: none;
+}
+
+#{s.c(embedFull)} {
+	@include card;
+	padding-inline-start: 10px;
+
+	// No color from the bot: the pill uses the accent
+	&:not([style*="border-left-color"])::before {
+		border-inline-start-color: var(--lily-accent) !important;
+	}
+
+	&::before {
+		@include pill;
+		border-inline-start: 4px solid;
+		border-inline-start-color: inherit;
+	}
+
+	#{s.c(embedMedia)},
+	#{s.c(embedImage)} img,
+	#{s.c(embedImage)} video,
+	#{s.c(embedThumbnail)} img,
+	#{s.c(embedThumbnail)} video {
+		border-radius: $inner-radius;
+	}
+}
+
+#{s.$messageAccessories} :is(#{s.c(withAccentColor)}) {
+	@include card;
+	padding-inline-start: 22px;
+
+	&::before {
+		@include pill;
+		width: 4px;
+		height: auto;
+		top: 10px;
+		bottom: 10px;
+		background-color: var(--__accent-color);
+		box-shadow: 0 0 10px -1px var(--__accent-color);
+	}
+
+	img,
+	video {
+		border-radius: $inner-radius;
+	}
+}

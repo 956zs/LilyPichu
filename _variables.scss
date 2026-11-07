@@ -119,6 +119,11 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--control-brand-foreground-new: var(--lily-accent-text);
 	--brand-500: var(--lily-accent);
 	--brand-560: color-mix(in srgb, var(--lily-accent), black 10%);
+	// Secondary buttons (embed/container actions, "View Full Profile", ...)
+	--control-secondary-background-default: color-mix(in srgb, var(--lily-accent) 16%, var(--lily-secondary-alt));
+	--control-secondary-background-hover: color-mix(in srgb, var(--lily-accent) 26%, var(--lily-secondary-alt));
+	--control-secondary-background-active: color-mix(in srgb, var(--lily-accent) 32%, var(--lily-secondary-alt));
+	--control-secondary-border-default: color-mix(in srgb, var(--lily-accent) 24%, transparent);
 	--switch-background-selected-default: var(--lily-accent);
 	--switch-background-selected-hover: color-mix(in srgb, var(--lily-accent), black 10%);
 

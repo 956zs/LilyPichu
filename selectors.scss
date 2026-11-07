@@ -46,6 +46,7 @@ $membersGroup: 'h3#{c(membersGroup)}';
 
 // Messages
 $message: '#{c(message)}';
+$messageAccessories: '[id^="message-accessories"]';
 $mentioned: '#{c(mentioned)}';
 
 // Profile cards: the banner and avatar sit in the card's own header

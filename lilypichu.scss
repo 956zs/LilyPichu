@@ -566,6 +566,8 @@ $dock-panels-bottom: 126px;
 	}
 }
 
+@include meta.load-css('embeds');
+
 // Gradients and the background image come last so they win over the flat
 // surface colors above when switched on
 @include meta.load-css('effects');
