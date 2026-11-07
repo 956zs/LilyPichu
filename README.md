@@ -12,6 +12,13 @@
 </div>
 <br/>
 
+## 2.6
+
+- Rounded message box with an accent glow while typing.
+- Round reaction chips; yours are filled with the accent.
+- Frosted-glass context menus with an accent pill on the focused item, accent tooltips, accent guild selection pill, accent scrollbars and keyboard focus rings.
+- Light motion (menus pop in, guild icons lift on hover), only when Discord runs with full motion.
+
 ## 2.5
 
 - Embeds and Components V2 containers are rounded cards with a soft accent tint; their side bar becomes a rounded pill that keeps each bot's own color.
