@@ -248,8 +248,13 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		background-color: transparent;
 	}
 
+	// Discord sizes member rows and the Activity cards from this variable,
+	// so they all follow the wider popout
+	#{s.$memberList} {
+		--custom-member-list-width: #{$popout-width};
+	}
+
 	#{s.$members} [role="listitem"] {
-		max-width: none;
 		border-radius: $radius;
 	}
 
