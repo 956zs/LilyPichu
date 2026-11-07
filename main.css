@@ -550,6 +550,13 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
     overflow: hidden;
     background-color: var(--lily-secondary);
   }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
+    height: auto;
+    overflow: visible;
+  }
+  :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar):has(> .custom-profile-frame) {
+    margin: 56px 18px 52px 10px;
+  }
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]),
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]):has(> aside:is([class^=membersWrap_], [class*=" membersWrap_"])) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]) > :is([class^=members_], [class*=" members_"]) {
     background-color: transparent;
@@ -688,7 +695,7 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
   }
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
     padding: 0;
-    overflow: hidden;
+    overflow: visible;
     border-radius: var(--border-radius, 20px);
     background: transparent;
   }
@@ -698,10 +705,11 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
     width: 100%;
     max-width: none;
     height: 100%;
-    overflow: hidden;
+    overflow: visible;
     border-radius: var(--border-radius, 20px);
   }
   :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) .user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) {
+    overflow: visible;
     border-radius: var(--border-radius, 20px);
   }
   #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > section:is([class^=panels_], [class*=" panels_"]) {
@@ -754,6 +762,9 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
     :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar) {
       bottom: calc(anchor(--lily-panels top) + 10px);
     }
+    :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > aside:has(> .user-profile-sidebar):has(> .custom-profile-frame) {
+      bottom: calc(anchor(--lily-panels top) + 50px);
+    }
     #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"])::before {
       display: none;
     }
@@ -771,6 +782,11 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
     }
   }
 }
+.user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]) {
+  border-radius: var(--border-radius, 20px) var(--border-radius, 20px) 0 0;
+  overflow: hidden;
+}
+
 .user-profile-popout > :is([class^=inner_], [class*=" inner_"]) > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]),
 .user-profile-sidebar > :is([class^=inner_], [class*=" inner_"]) > * > :is([class^=header_], [class*=" header_"]) > :is([class^=banner_], [class*=" banner_"]) {
   height: 300px !important;
