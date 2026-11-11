@@ -21,8 +21,9 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 
 	--lily-text: color-mix(in srgb, #{$dark}, white 82%);
 	--lily-text-strong: color-mix(in srgb, #{$dark}, white 92%);
-	--lily-text-muted: color-mix(in srgb, #{$dark}, #f0f0f0 68%);
-	--lily-text-subtle: color-mix(in srgb, #{$dark}, #d8d8d8 52%);
+	// Muted and subtle text (timestamps, "edited", hints) keep 4.5:1 on the chat background
+	--lily-text-muted: color-mix(in srgb, #{$dark}, #f4f4f4 74%);
+	--lily-text-subtle: color-mix(in srgb, #{$dark}, #d8d8d8 72%);
 	--lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
 	--lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
 	--lily-interactive-active: color-mix(in srgb, #{$dark}, white 90%);
@@ -33,6 +34,10 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	// The pink frame and its title bar text; hsl(346 100% 89%) is #ffc7d4
 	--lily-frame: hsl(from #{$dark} h 100% 89%);
 	--lily-frame-text: hsl(from #{$dark} h 31% 42%);
+
+	// Links and info notices: a lilac a little cooler than the accent, so a
+	// link never reads as a mention (Discord's are blue)
+	--lily-link: hsl(from var(--lily-accent) calc(h - 46) 85% 80%);
 }
 
 @mixin light-palette {
@@ -46,8 +51,8 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 
 	--lily-text: color-mix(in srgb, #{$light}, #3a2a2e 75%);
 	--lily-text-strong: color-mix(in srgb, #{$light}, #1e1416 80%);
-	--lily-text-muted: color-mix(in srgb, #{$light}, #5a4a4e 70%);
-	--lily-text-subtle: color-mix(in srgb, #{$light}, #7a6a6e 55%);
+	--lily-text-muted: color-mix(in srgb, #{$light}, #4a3a3e 74%);
+	--lily-text-subtle: color-mix(in srgb, #{$light}, #66565a 82%);
 	--lily-interactive: color-mix(in srgb, #{$light}, #5a3a42 65%);
 	--lily-interactive-hover: color-mix(in srgb, #{$light}, #3a2a2e 70%);
 	--lily-interactive-active: color-mix(in srgb, #{$light}, #1e1416 80%);
@@ -57,6 +62,8 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 
 	--lily-frame: hsl(from #{$light} h 100% 89%);
 	--lily-frame-text: hsl(from #{$light} h 31% 42%);
+
+	--lily-link: hsl(from var(--lily-accent) calc(h - 46) 60% 38%);
 }
 
 // Discord's semantic tokens (2026 naming). Old names such as
@@ -143,6 +150,18 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	// Code and quotes
 	--background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
 	--spine-default: var(--lily-accent);
+
+	// Links and the blue info notices ("Go to settings", age group notice, ...)
+	--text-link: var(--lily-link);
+	--icon-link: var(--lily-link);
+	--text-code-link: var(--lily-link);
+	--text-feedback-info: var(--lily-link);
+	--icon-feedback-info: var(--lily-link);
+	--notice-text-info: var(--lily-link);
+	--background-feedback-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+	--notice-background-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+	--border-feedback-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
+	--inlinenotice-border-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
 
 	// Keyboard focus rings (Discord's default is blue)
 	--focus-primary: var(--lily-accent);

@@ -375,6 +375,12 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 		}
 	}
 
+	// Rows fade out above the stitched footer instead of being cut by it
+	#{s.$members},
+	#{s.$nowPlaying} > aside > #{s.c(scroller)} {
+		mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
+	}
+
 	#{s.$nowPlaying} {
 		&::before {
 			content: var(--activity-title, "Active now");
