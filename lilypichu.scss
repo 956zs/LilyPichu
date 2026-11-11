@@ -49,6 +49,11 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	border: none;
 	border-radius: $radius;
 	box-shadow: none;
+
+	// Its action button had Discord's 3px corners; same shape as every other button
+	button {
+		border-radius: 8px;
+	}
 }
 
 // The title bar sits on the pink background, so it needs dark text
