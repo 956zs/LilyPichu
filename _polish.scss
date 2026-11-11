@@ -105,4 +105,17 @@ form #{s.c(channelTextArea)} {
 	form #{s.c(channelTextArea)} {
 		transition: background 150ms ease, box-shadow 200ms ease;
 	}
+
+	// Message links draw their underline on hover instead of popping it in
+	#{s.c(markup)} a[href] {
+		text-decoration: none;
+		background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+		box-decoration-break: clone;
+		transition: background-size 200ms ease;
+
+		&:hover {
+			text-decoration: none;
+			background-size: 100% 1px;
+		}
+	}
 }

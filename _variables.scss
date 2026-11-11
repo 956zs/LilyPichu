@@ -35,9 +35,9 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--lily-frame: hsl(from #{$dark} h 100% 89%);
 	--lily-frame-text: hsl(from #{$dark} h 31% 42%);
 
-	// Links and info notices: a lilac a little cooler than the accent, so a
-	// link never reads as a mention (Discord's are blue)
-	--lily-link: hsl(from var(--lily-accent) calc(h - 46) 85% 80%);
+	// Links and info notices: a warm peach next to the accent, so a link never
+	// reads as a mention (Discord's are blue)
+	--lily-link: hsl(from var(--lily-accent) calc(h + 35) 85% 78%);
 }
 
 @mixin light-palette {
@@ -63,7 +63,7 @@ $light: 'var(--base-color-light, var(--base-color, #fd8787))';
 	--lily-frame: hsl(from #{$light} h 100% 89%);
 	--lily-frame-text: hsl(from #{$light} h 31% 42%);
 
-	--lily-link: hsl(from var(--lily-accent) calc(h - 46) 60% 38%);
+	--lily-link: hsl(from var(--lily-accent) calc(h + 35) 70% 34%);
 }
 
 // Discord's semantic tokens (2026 naming). Old names such as
