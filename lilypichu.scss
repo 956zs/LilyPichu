@@ -85,11 +85,16 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 #{s.$guilds} {
 	background: var(--lily-tertiary);
 
-	// The card's top edge sits right above the DM button; Discord relied on
-	// the title bar for that gap. 6px centers it on the server header.
-	// The scroller's padding is set inline.
+}
+
+// The card's top edge sits right above the DM button; Discord relied on
+// the title bar for that gap. 12px gives the button the same room the
+// card's corner has. BetterFolders' folder column gets the same offset so
+// its first server lines up with the DM button. The padding is set inline.
+#{s.$guilds},
+#{s.$sidebar} > .vc-betterFolders-sidebar nav#{s.c(guilds)} {
 	> #{s.c(tree)} > #{s.c(scroller)} {
-		padding-top: 6px !important;
+		padding-top: 12px !important;
 	}
 }
 
