@@ -14,8 +14,8 @@
   --lily-accent-text: color-mix(in srgb, var(--lily-accent), white 45%);
   --lily-text: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 82%);
   --lily-text-strong: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 92%);
-  --lily-text-muted: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #f0f0f0 68%);
-  --lily-text-subtle: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #d8d8d8 52%);
+  --lily-text-muted: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #f4f4f4 74%);
+  --lily-text-subtle: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #d8d8d8 72%);
   --lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
   --lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
   --lily-interactive-active: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 90%);
@@ -24,6 +24,7 @@
   --lily-active: color-mix(in srgb, var(--lily-accent) 26%, transparent);
   --lily-frame: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 100% 89%);
   --lily-frame-text: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 31% 42%);
+  --lily-link: hsl(from var(--lily-accent) calc(h + 35) 85% 78%);
   --app-frame-background: var(--lily-tertiary);
   --background-base-lowest: var(--lily-tertiary);
   --background-base-lower: var(--lily-secondary-alt);
@@ -97,6 +98,16 @@
   --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
   --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
   --spine-default: var(--lily-accent);
+  --text-link: var(--lily-link);
+  --icon-link: var(--lily-link);
+  --text-code-link: var(--lily-link);
+  --text-feedback-info: var(--lily-link);
+  --icon-feedback-info: var(--lily-link);
+  --notice-text-info: var(--lily-link);
+  --background-feedback-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+  --notice-background-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+  --border-feedback-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
+  --inlinenotice-border-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
   --focus-primary: var(--lily-accent);
   --border-focus: var(--lily-accent);
   --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -126,8 +137,8 @@
   --lily-accent-text: color-mix(in srgb, var(--lily-accent), black 15%);
   --lily-text: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 75%);
   --lily-text-strong: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
-  --lily-text-muted: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a4a4e 70%);
-  --lily-text-subtle: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #7a6a6e 55%);
+  --lily-text-muted: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #4a3a3e 74%);
+  --lily-text-subtle: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #66565a 82%);
   --lily-interactive: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a3a42 65%);
   --lily-interactive-hover: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 70%);
   --lily-interactive-active: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
@@ -136,6 +147,7 @@
   --lily-active: color-mix(in srgb, var(--lily-accent) 21%, transparent);
   --lily-frame: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 100% 89%);
   --lily-frame-text: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 31% 42%);
+  --lily-link: hsl(from var(--lily-accent) calc(h + 35) 70% 34%);
   --app-frame-background: var(--lily-tertiary);
   --background-base-lowest: var(--lily-tertiary);
   --background-base-lower: var(--lily-secondary-alt);
@@ -209,6 +221,16 @@
   --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
   --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
   --spine-default: var(--lily-accent);
+  --text-link: var(--lily-link);
+  --icon-link: var(--lily-link);
+  --text-code-link: var(--lily-link);
+  --text-feedback-info: var(--lily-link);
+  --icon-feedback-info: var(--lily-link);
+  --notice-text-info: var(--lily-link);
+  --background-feedback-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+  --notice-background-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+  --border-feedback-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
+  --inlinenotice-border-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
   --focus-primary: var(--lily-accent);
   --border-focus: var(--lily-accent);
   --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -243,8 +265,8 @@
     --lily-accent-text: color-mix(in srgb, var(--lily-accent), white 45%);
     --lily-text: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 82%);
     --lily-text-strong: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 92%);
-    --lily-text-muted: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #f0f0f0 68%);
-    --lily-text-subtle: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #d8d8d8 52%);
+    --lily-text-muted: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #f4f4f4 74%);
+    --lily-text-subtle: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), #d8d8d8 72%);
     --lily-interactive: color-mix(in srgb, var(--lily-accent), white 48%);
     --lily-interactive-hover: color-mix(in srgb, var(--lily-accent), white 70%);
     --lily-interactive-active: color-mix(in srgb, var(--base-color-dark, var(--base-color, #6e3f4a)), white 90%);
@@ -253,6 +275,7 @@
     --lily-active: color-mix(in srgb, var(--lily-accent) 26%, transparent);
     --lily-frame: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 100% 89%);
     --lily-frame-text: hsl(from var(--base-color-dark, var(--base-color, #6e3f4a)) h 31% 42%);
+    --lily-link: hsl(from var(--lily-accent) calc(h + 35) 85% 78%);
     --app-frame-background: var(--lily-tertiary);
     --background-base-lowest: var(--lily-tertiary);
     --background-base-lower: var(--lily-secondary-alt);
@@ -326,6 +349,16 @@
     --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
     --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
     --spine-default: var(--lily-accent);
+    --text-link: var(--lily-link);
+    --icon-link: var(--lily-link);
+    --text-code-link: var(--lily-link);
+    --text-feedback-info: var(--lily-link);
+    --icon-feedback-info: var(--lily-link);
+    --notice-text-info: var(--lily-link);
+    --background-feedback-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+    --notice-background-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+    --border-feedback-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
+    --inlinenotice-border-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
     --focus-primary: var(--lily-accent);
     --border-focus: var(--lily-accent);
     --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -359,8 +392,8 @@
     --lily-accent-text: color-mix(in srgb, var(--lily-accent), black 15%);
     --lily-text: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 75%);
     --lily-text-strong: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
-    --lily-text-muted: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a4a4e 70%);
-    --lily-text-subtle: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #7a6a6e 55%);
+    --lily-text-muted: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #4a3a3e 74%);
+    --lily-text-subtle: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #66565a 82%);
     --lily-interactive: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #5a3a42 65%);
     --lily-interactive-hover: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #3a2a2e 70%);
     --lily-interactive-active: color-mix(in srgb, var(--base-color-light, var(--base-color, #fd8787)), #1e1416 80%);
@@ -369,6 +402,7 @@
     --lily-active: color-mix(in srgb, var(--lily-accent) 21%, transparent);
     --lily-frame: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 100% 89%);
     --lily-frame-text: hsl(from var(--base-color-light, var(--base-color, #fd8787)) h 31% 42%);
+    --lily-link: hsl(from var(--lily-accent) calc(h + 35) 70% 34%);
     --app-frame-background: var(--lily-tertiary);
     --background-base-lowest: var(--lily-tertiary);
     --background-base-lower: var(--lily-secondary-alt);
@@ -442,6 +476,16 @@
     --brand-20a: color-mix(in srgb, var(--lily-accent) 20%, transparent);
     --background-code: color-mix(in srgb, var(--lily-tertiary) 65%, var(--lily-secondary));
     --spine-default: var(--lily-accent);
+    --text-link: var(--lily-link);
+    --icon-link: var(--lily-link);
+    --text-code-link: var(--lily-link);
+    --text-feedback-info: var(--lily-link);
+    --icon-feedback-info: var(--lily-link);
+    --notice-text-info: var(--lily-link);
+    --background-feedback-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+    --notice-background-info: color-mix(in srgb, var(--lily-link) 8%, transparent);
+    --border-feedback-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
+    --inlinenotice-border-info: color-mix(in srgb, var(--lily-link) 45%, transparent);
     --focus-primary: var(--lily-accent);
     --border-focus: var(--lily-accent);
     --scrollbar-auto-thumb: color-mix(in srgb, var(--lily-accent) 45%, transparent);
@@ -491,6 +535,9 @@
   border-radius: var(--border-radius, 20px);
   box-shadow: none;
 }
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=notice_], [class*=" notice_"]) button {
+  border-radius: 8px;
+}
 
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]),
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=bar_], [class*=" bar_"]) :is(.theme-dark, .theme-light) {
@@ -514,8 +561,10 @@
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) {
   background: var(--lily-tertiary);
 }
-#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) > :is([class^=tree_], [class*=" tree_"]) > :is([class^=scroller_], [class*=" scroller_"]) {
-  padding-top: 6px !important;
+
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > nav:is([class^=guilds_], [class*=" guilds_"]) > :is([class^=tree_], [class*=" tree_"]) > :is([class^=scroller_], [class*=" scroller_"]),
+#app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > .vc-betterFolders-sidebar nav:is([class^=guilds_], [class*=" guilds_"]) > :is([class^=tree_], [class*=" tree_"]) > :is([class^=scroller_], [class*=" scroller_"]) {
+  padding-top: 12px !important;
 }
 
 #app-mount :is([class^=notAppAsidePanel_], [class*=" notAppAsidePanel_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=app_], [class*=" app_"]) > :is([class^=layers_], [class*=" layers_"]) > :is([class^=baseLayer_], [class*=" baseLayer_"]) > :is([class^=container_], [class*=" container_"]) > :is([class^=base_], [class*=" base_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=sidebar_], [class*=" sidebar_"]) > :is([class^=sidebarList_], [class*=" sidebarList_"]) {
@@ -745,6 +794,10 @@ h3:is([class^=membersGroup_], [class*=" membersGroup_"]) > :is([class^=membersGr
     background-position: top;
     background-size: 21px 2px;
     background-repeat: repeat-x;
+  }
+  :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) > :is([class^=members_], [class*=" members_"]),
+  :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"]) > aside > :is([class^=scroller_], [class*=" scroller_"]) {
+    mask-image: linear-gradient(to bottom, #000 calc(100% - 28px), transparent);
   }
   :is([class^=tabBody_], [class*=" tabBody_"]) > :is([class^=nowPlayingColumn_], [class*=" nowPlayingColumn_"])::before {
     content: var(--activity-title, "Active now");
@@ -1023,6 +1076,18 @@ form :is([class^=channelTextArea_], [class*=" channelTextArea_"]):focus-within {
 .full-motion :is(:is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > :is([class^=container_], [class*=" container_"]) > aside:is([class^=membersWrap_], [class*=" membersWrap_"]), :is([class^=chat_], [class*=" chat_"]) > :is([class^=content_], [class*=" content_"]) > div:is([class^=membersWrap_], [class*=" membersWrap_"])) > :is([class^=members_], [class*=" members_"]) [role=listitem],
 .full-motion form :is([class^=channelTextArea_], [class*=" channelTextArea_"]) {
   transition: background 150ms ease, box-shadow 200ms ease;
+}
+
+.full-motion :is([class^=markup_], [class*=" markup_"]) a[href] {
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100%/0 1px no-repeat;
+  box-decoration-break: clone;
+  transition: background-size 200ms ease;
+}
+
+.full-motion :is([class^=markup_], [class*=" markup_"]) a[href]:hover {
+  text-decoration: none;
+  background-size: 100% 1px;
 }
 
 :is([class^=markup_], [class*=" markup_"]) pre {
