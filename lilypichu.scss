@@ -304,7 +304,8 @@ $popout-space: calc(#{$popout-width} + #{$popout-right} + 70px);
 	#{s.$base}::before,
 	#{s.$base}::after {
 		position: fixed;
-		top: 220px;
+		// Plugins that fill the space above (FriendNotes) push the popout down
+		top: var(--lily-popout-top, 220px);
 		bottom: 128px;
 		right: $popout-right;
 		width: $popout-width;
